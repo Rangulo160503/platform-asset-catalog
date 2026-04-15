@@ -1,0 +1,80 @@
+asset:
+  name: carrier-routing
+  #gitRepository: https://github.com/coretech/carrier-routing-terra-live
+  globalMetadata:
+    lob: tech_dev_wholesale
+    scrumTeam: carrier-routing
+    applicationGroup: carrier-routing
+    
+  metadata:
+    jiraProjectId: CARRIERQUEUE
+    githubTeamId: coretech/carrier-routing
+    teamSlackChannel: team_carrier_routing
+    resourceOwner: carrier-routing@idt.net
+  
+  owners:
+    stakeholders:
+      - anthony.davidson@idt.net
+    productOwners:
+      - anthony.davidson@idt.net
+    technicalExperts:
+      - inna.golovchtchikova@idt.net
+      - alexander.sheleh@idt.net
+      - alexander.kovalev@idt.net
+   
+## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each memeber will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      - ## Email address, ends with @idt.net
+        ##  (Required)
+        email: manan.patel@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: manpatel
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: mpatel
+      - ## Email address, ends with @idt.net
+        ##  (Required)
+        email: inna.golovchtchikova@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: igolov
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: igolovchtchikova
+    
+    maintainers: ~
+
+    developers: ~
+
+
+  environments:
+    sand:
+      envType: dev
+      accountId: 312226949769
+    sand-v2:
+      envType: dev
+      accountId: 312226949769
+
+    qa:
+      envType: qa
+      accountId: 470427355418
+    qa-v2:
+      envType: qa
+      accountId: 470427355418
+
+    production:
+      envType: prod
+      accountId: 412304547329
+      protected: false
+    prod-v2:
+      envType: prod
+      accountId: 412304547329
+      protected: true

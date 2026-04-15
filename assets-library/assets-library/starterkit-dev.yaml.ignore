@@ -1,0 +1,79 @@
+# Marked for the decommission
+asset:
+  name: starterkit-dev
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devops
+    applicationGroup: starterkit-dev
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: eytan.faverman@idt.net
+
+  owners:
+    stakeholders:
+      - eytan.faverman@idt.net
+    productOwners:
+      - eytan.faverman@idt.net
+    technicalExperts:
+      - eytan.faverman@idt.net
+
+  users:
+    admins:
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: mikalai.hryb@idt.net
+        githubUsername: mikalai-hryb-idt
+        ldapUid: mhryb
+
+    maintainers:
+      - email: idt-jenkins+testuser1@idt.net
+        githubUsername: IDT-JENKINS
+        ldapUid: devops_test_2
+
+    developers:
+      - email: idt-jenkins+testuser1@idt.net
+        githubUsername: IDT-JENKINS
+        ldapUid: devops_test_1
+
+
+  environments:
+    sand:
+      envType: lab
+      accountId: 312226949769
+      protected: false
+      vpcName: generic
+    dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    n2p-dev:
+      envType: dev
+      accountId: 542258342574
+    dev1:
+      envType: dev
+      accountId: 833915412828
+    dev-legacy:
+      envType: dev
+      accountId: 833915412828
+      vpcName: legacy
+    qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    qav1:
+      envType: qa
+      accountId: 470427355418
+      protected: true
+    uat:
+      envType: uat
+      accountId: 470427355418
+      protected: true
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true

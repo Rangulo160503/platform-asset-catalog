@@ -1,0 +1,118 @@
+asset:
+  name: devops
+  infrastructure: true
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devtools
+    applicationGroup: devops
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/devops-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: devops@idt.net
+
+  owners:
+    stakeholders:
+      - sai.giridhar@idt.net
+    productOwners:
+      - alexey.chudnikov@idt.net
+    technicalExperts:
+      - eytan.faverman@idt.net
+
+  users:
+    admins:
+      - email: alexey.chudnikov@idt.net
+        githubUsername: goodml
+        ldapUid: achudnikov
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: dmitry.akunevich@idt.net
+        githubUsername: dakunevichIDT
+        ldapUid: dakunevich
+      - email: roman.vaskevich@idt.net
+        githubUsername: RamanVaskevich1984
+        ldapUid: rvaskevich
+      - email: anton.kapustin@idt.net
+        githubUsername: AntonyKapustin
+        ldapUid: akapustin
+      - email: yahor.fedasenka@idt.net
+        githubUsername: yahorf
+        ldapUid: yfedasenka
+      - email: albert.nieriz@idt.net
+        githubUsername: anieriz-idt
+        ldapUid: anieriz
+      - email: steven.quiros@idt.net
+        githubUsername: stevenquiros-idt
+        ldapUid: squiros
+      - email: sai.giridhar@idt.net
+        githubUsername: saigiridhar
+        ldapUid: sgiridhar
+      - email: nicolas.ruiz@idt.net
+        githubUsername: nruiz-idt
+        ldapUid: nruiz
+      - email: mikhail.menshov@idt.net
+        githubUsername: mikhail-menshov
+        ldapUid: mmensh
+      - email: eduardo.mazzali@idt.net
+        githubUsername: EduardoIDTX
+        ldapUid: emazzali
+      - email: yulyan.glonti@idt.net
+        githubUsername: yglonti
+        ldapUid: yglonti
+      - email: tsimafei.vavulau@idt.net
+        githubUsername: tsimafei-vavulau-idt
+        ldapUid: tvavulau
+      - email: devops-rancher@idt.net
+        githubUsername: AntonyKapustin
+        ldapUid: devops-rancher
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    devops:
+      envType: prod
+      accountId: 416223954868
+      protected: true
+      allowApplyInParallelWithOtherEnvironments: false
+    core_services:
+      envType: prod
+      accountId: 416223954868
+      protected: true
+      allowApplyInParallelWithOtherEnvironments: false
+    idt_dev:
+      envType: dev
+      accountId: 833915412828
+    idt_qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+      protected: true
+    devops-dev:
+      envType: prod
+      accountId: 416223954868
+      protected: true
+      vpcName: dev
+      allowApplyInParallelWithOtherEnvironments: false
+    devops-prod:
+      envType: prod
+      accountId: 416223954868
+      protected: true
+      vpcName: prod
+      allowApplyInParallelWithOtherEnvironments: false
+    vault-dev-11003:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    vault-qa-11003:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    vault-prod-11003:
+      envType: prod
+      accountId: 412304547329
+      vaultSupport: true

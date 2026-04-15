@@ -1,0 +1,40 @@
+asset:
+  name: antony
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: DevOps
+    applicationGroup: antonk
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: anton.kapustin@idt.net
+
+  owners:
+    stakeholders:
+      - anton.kapustin@idt.net
+    productOwners:
+      - anton.kapustin@idt.net
+    technicalExperts:
+      - anton.kapustin@idt.net
+
+  users:
+    admins:
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: anton.kapustin@idt.net
+        githubUsername: AntonyKapustin
+        ldapUid: akapustin
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      protected: false
+      accountId: 833915412828

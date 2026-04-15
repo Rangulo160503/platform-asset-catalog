@@ -1,0 +1,116 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: n2p-i2
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_n2p_office
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: ui
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: n2p-i2
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: UI
+
+    ## id of github team, starts with "coretech"
+    ## (Optional)
+    githubTeamId: coretech/n2p-i2
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: n2p-f-i2
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: avi.charlop@net2phone.com
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - yitzi.wurtzel@net2phone.com
+      - anatoly.popov@idt.net
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - yitzi.wurtzel@net2phone.com
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - avi.charlop@net2phone.com
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: avi.charlop@net2phone.com
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: acharlop
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: acharlop
+      - email: anatoly.popov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: aensidhe
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: apopov
+      - email: robert.grigorian@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: therobertgrigoryan
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: rgrigorian
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      - email: marcelo.vargas@idt.net
+        githubUsername: marcelovargasvargas
+        ldapUid: mvargas
+      - email: aleksander.kosobudsky@idt.net
+        githubUsername: alexkosobudsky
+        ldapUid: akosobudsky
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    dev:
+      envType: dev
+      accountId: 542258342574
+    qa1:
+      envType: qa
+      accountId: 542258342574
+    uat:
+      envType: uat
+      accountId: 577533758790
+    prod:
+      envType: prod
+      accountId: 577533758790

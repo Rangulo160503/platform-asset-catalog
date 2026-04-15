@@ -1,0 +1,96 @@
+asset:
+  name: nvc
+  globalMetadata:
+    lob: tech_dev_n2p_office
+    scrumTeam: n2p-videoconference
+    applicationGroup: huddle
+  metadata:
+    jiraProjectId: N2PVID
+    githubTeamId: net2phone/n2p-huddle
+    teamSlackChannel: n2p-videoconference
+    resourceOwner: arunim.devroy@idt.net
+  owners:
+    stakeholders:
+      - arunim.devroy@idt.net
+    productOwners:
+      - arunim.devroy@idt.net
+    technicalExperts:
+      - alexey.tkachev@idt.net
+      - andrew.chuhlomin@idt.net
+  users:
+    admins:
+      - email: alexey.tkachev@idt.net
+        githubUsername: Alex-Tkachev
+        ldapUid: atkachev
+      - email: alex.korzun@idt.net
+        githubUsername: korzunav
+        ldapUid: akorzun
+      - email: andrew.chuhlomin@idt.net
+        githubUsername: achuhlomin
+        ldapUid: achuhlomin
+      - email: pavel.sokolow@idt.net
+        githubUsername: pasokolow
+        ldapUid: psokolow
+      - email: ihar.bandarenka@idt.net
+        githubUsername: ihar-bandarenka-idt
+        ldapUid: ibandarenka
+    maintainers: ~
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      protected: false
+      accountId: 542258342574
+      vpcName: videoconference
+    qa:
+      envType: qa
+      protected: false
+      accountId: 542258342574
+      vpcName: videoconference
+    qa_ea_sip:
+      envType: qa
+      protected: false
+      accountId: 542258342574
+      vpcName: videoconference
+    qa_sa_malcolm:
+      envType: qa
+      protected: false
+      accountId: 542258342574
+      vpcName: videoconference
+    qa_macbeth:
+      envType: qa
+      protected: false
+      accountId: 542258342574
+      vpcName: videoconference
+    qa_macduff:
+      envType: qa
+      protected: false
+      accountId: 542258342574
+      vpcName: videoconference
+    #### START OF PROD
+    prod:
+      envType: prod
+      protected: false
+      accountId: 577533758790
+      vpcName: videoconference
+    prod_hamlet:
+      envType: prod
+      protected: false
+      accountId: 577533758790
+      vpcName: videoconference
+    prod_gertrude:
+      envType: prod
+      protected: false
+      accountId: 577533758790
+      vpcName: videoconference
+    prod_sip_ea:
+      envType: prod
+      protected: false
+      accountId: 577533758790
+      vpcName: videoconference
+    uat:
+      envType: uat
+      protected: false
+      accountId: 577533758790
+      vpcName: videoconference

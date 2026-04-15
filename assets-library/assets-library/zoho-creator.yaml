@@ -1,0 +1,36 @@
+---
+asset:
+  name: zoho-creator
+
+  globalMetadata:
+    lob: tech_dev_wholesale
+    scrumTeam: mpatel
+    applicationGroup: mpatel
+
+  metadata:
+    resourceOwner: manan.patel@idt.net
+
+  owners:
+    stakeholders:
+      - manan.patel@idt.net
+    productOwners:
+      - manan.patel@idt.net
+    technicalExperts:
+      - manan.patel@idt.net
+
+  users:
+    admins:
+      - email: manan.patel@idt.net
+        githubUsername: manpatel
+        ldapUid: mpatel
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+      protected: false
+      vaultSupport: false

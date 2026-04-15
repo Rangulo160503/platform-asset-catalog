@@ -1,0 +1,85 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+
+root = true
+
+# all files
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+max_line_length = 120
+indent_style = space
+
+[*.txt]
+indent_style = tab
+indent_size = 4
+
+[*.{diff,markdown}]
+trim_trailing_whitespace = false
+max_line_length = unset
+max_line_length = off
+
+[*.go]
+indent_style = tab
+indent_size = 4
+
+[*.golden]
+trim_trailing_whitespace = false
+insert_final_newline = false
+
+[*.expected]
+trim_trailing_whitespace = false
+insert_final_newline = false
+
+[*.{yaml,yml}]
+indent_size = 2
+max_line_length = unset
+
+
+[*.tf]
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
+
+[*.md]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespaces = false
+insert_final_newline = true
+
+[*.min.js]
+indent_style = unset
+insert_final_newline = false
+max_line_length = unset
+
+
+[*.min.css]
+indent_style = unset
+insert_final_newline = false
+max_line_length = unset
+
+[*.{css,scss,less}]
+indent_size = 2
+max_line_length = 80
+
+[*.bat]
+indent_style = tab
+
+[*.xml]
+indent_size = 4
+max_line_length = unset
+
+[*.json]
+indent_size = 2
+insert_final_newline = false
+max_line_length = unset
+
+[*.html]
+indent_size = 2
+max_line_length = unset

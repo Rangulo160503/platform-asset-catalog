@@ -1,0 +1,79 @@
+asset:
+  name: rcs-gf
+
+  globalMetadata:
+    lob: tech_dev_br_retail
+    scrumTeam: team_rcs
+    applicationGroup: retail-channel-services
+
+  metadata:
+    jiraProjectId: RCS
+    githubTeamId: coretech/team_rcs_code_owners
+    teamSlackChannel: team_rcs
+    resourceOwner: carlos.castillo@idt.net
+
+  owners:
+    stakeholders:
+      - christine.fernandez@idt.net
+
+    productOwners:
+      - emilio.delrio@idt.net
+
+    technicalExperts:
+      - yung.chang@idt.net
+
+  users:
+    ## List of Asset Administrators. Each memeber will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      - email: carlos.castillo@idt.net
+        githubUsername: ccastillo
+        ldapUid: cacastillo
+      - email: yung.chang@idt.net
+        githubUsername: yungchan
+        ldapUid: ychang
+      - email: viktor.chalyi@idt.net
+        githubUsername: vchalyi
+        ldapUid: vchalyi
+
+    ## List of Asset Maintainers. Each memeber will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      - email: pavel.spizhuk@idt.net
+        githubUsername: pspizhuk
+        ldapUid: pspizhuk
+      - email: anton.permiakov@idt.net
+        githubUsername: anton-permiakov
+        ldapUid: apermiakov
+      - email: kirill.smolovskii@idt.net
+        githubUsername: kirill-smolovskii-idt
+        ldapUid: ksmolovskii
+      - email: danil.selitsky@idt.net
+        githubUsername: danilselitskiy
+        ldapUid: dselitsky
+      - email: halil.isvarlar@idt.net
+        githubUsername: halilisvarlar
+        ldapUid: hisvarlar
+
+    ## List of Asset Developers. Each memeber will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 470427355418
+    qa:
+      envType: qa
+      accountId: 470427355418
+      # protected: true
+    uat:
+      envType: uat
+      accountId: 412304547329
+    prod:
+      envType: prod
+      accountId: 412304547329
+      # protected: true

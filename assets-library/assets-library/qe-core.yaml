@@ -1,0 +1,92 @@
+asset:
+  name: qe-core
+  globalMetadata:
+    lob: tech_dev_br_general
+    scrumTeam: QA
+    applicationGroup: qe-core
+  metadata:
+    jiraProjectId: ~
+    githubTeamId: coretech/qe-administrators
+    teamSlackChannel: quality-engineering
+    resourceOwner: stanislav.badov@idt.net
+  owners:
+    stakeholders:
+      - stanislav.badov@idt.net
+      - karime.salomon@idt.net
+      - olga.kudina@idt.net
+    productOwners:
+      - stanislav.badov@idt.net
+      - karime.salomon@idt.net
+      - olga.kudina@idt.net
+    technicalExperts:
+      - eytan.faverman@idt.net
+      - alexey.chudnikov@idt.net
+
+  users:
+    admins:
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: stanislav.badov@idt.net
+        githubUsername: stanislav-badov-idt
+        ldapUid: sbadov
+      - email: karime.salomon@idt.net
+        githubUsername: KarimeSZ
+        ldapUid: ksalomon
+      - email: anton.piatrovich@idt.net
+        githubUsername: apiatrovich
+        ldapUid: apiatrovich
+      - email: olga.kudina@idt.net
+        githubUsername: kudzina
+        ldapUid: okudina
+      - email: fernando.mercado@idt.net
+        githubUsername: fmercado
+        ldapUid: fmercado
+      - email: walter.mercado@idt.net
+        githubUsername: iRetlaWM
+        ldapUid: wmercado
+      - email: aldo.balderrama@idt.net
+        githubUsername: mabalderramav
+        ldapUid: abalderrama
+      - email: raul.cabero@idt.net
+        githubUsername: rcaberoidt
+        ldapUid: rcabero
+      - email: anton.serhiyenka@idt.net
+        githubUsername: aserhiyenka
+        ldapUid: aserhiyenka
+      - email: aidar.iakupov@idt.net
+        githubUsername: aidariakupov
+        ldapUid: aiakupov
+      - email: artsiom.yankouski@idt.net
+        githubUsername: artsiomyankouski
+        ldapUid: ayankouski
+      - email: franco.aldunate@idt.net
+        githubUsername: franco-aldunate-idt
+        ldapUid: faldunate
+      - email: marcos.lara@idt.net
+        githubUsername: marcos-lara-idt
+        ldapUid: mlara
+      - email: nikolai.shimanskiy@idt.net
+        githubUsername: NikolaiShimanskiyIDT
+        ldapUid: nshimanskiy
+      - email: idtqe-jenkins@idt.net
+        githubUsername: IDTQE-JENKINS
+        ldapUid: idtqe-jenkins
+      - email: sergei.kolos@idt.net
+        githubUsername: sergeikolos-idt
+        ldapUid: skolos
+        
+    maintainers: ~
+
+    developers: ~
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+    qa:
+      envType: qa
+      accountId: 470427355418
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true

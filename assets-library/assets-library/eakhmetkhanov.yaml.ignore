@@ -1,0 +1,50 @@
+# Marked for the decommission 
+---
+asset:
+  name: eakhmetkhanov
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: DevOps
+    applicationGroup: eakhmetkhanov
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: evgeny.akhmetkhanov@idt.net
+
+  owners:
+    stakeholders:
+      - evgeny.akhmetkhanov@idt.net
+    productOwners:
+      - evgeny.akhmetkhanov@idt.net
+    technicalExperts:
+      - evgeny.akhmetkhanov@idt.net
+
+  users:
+    admins:
+      - email: evgeny.akhmetkhanov@idt.net
+        githubUsername: evgeny-akhmetkhanov
+        ldapUid: eakhmetkhanov
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+
+    maintainers:
+
+    developers:
+
+  environments:
+    sandbox:
+      envType: lab
+      accountId: 312226949769
+      protected: false
+      vpcName: generic
+    dev:
+      envType: dev
+      accountId: 833915412828
+    v1:
+      envType: qa
+      protected: false
+      accountId: 470427355418

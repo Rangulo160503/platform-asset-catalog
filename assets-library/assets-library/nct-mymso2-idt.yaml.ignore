@@ -1,0 +1,61 @@
+asset:
+  name: nct-mymso2-idt
+
+  globalMetadata:
+    lob: tech_dev_cable_telephony
+    scrumTeam: cvoss
+    applicationGroup: ~
+
+  metadata:
+    jiraProjectId: cvoss
+    githubTeamId: ~
+    teamSlackChannel: mymso2_build
+    resourceOwner: willysoria.guzman@idt.net
+
+  owners:
+    stakeholders:
+      - arunim.devroy@idt.net
+    productOwners:
+      - natasha.stone@idt.net
+    technicalExperts:
+      - willysoria.guzman@idt.net
+
+  users:
+    admins:
+      - email: Marcelo.Ancieta@idt.net
+        githubUsername: mancieta
+        ldapUid: mancieta
+      - email: vanesa.portillo@idt.net
+        githubUsername: vportillo-idtnet
+        ldapUid: vportillo
+      - email: fidel.barcaya@idt.net
+        githubUsername: fbarcaya
+        ldapUid: fbarcaya
+      - email: eytan.faverman-test@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: roman.vaskevich@idt.net
+        githubUsername: RamanVaskevich1984
+        ldapUid: rvaskevich
+      - email: carlos.uscamayta@net2phone.com
+        githubUsername: carlosuscamayta
+        ldapUid: cuscamayta
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    dev:
+      envType: qa
+      accountId: 833915412828
+    staging:
+      envType: qa
+      accountId: 833915412828
+      protected: false
+    qa:
+      envType: qa
+      accountId: 470427355418
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true

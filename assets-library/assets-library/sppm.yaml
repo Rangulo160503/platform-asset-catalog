@@ -1,0 +1,74 @@
+asset:
+  name: sppm
+
+  globalMetadata:
+    lob: tech_dev_reseller
+    scrumTeam: team_sppm
+    applicationGroup: n2p-legacy-applications
+
+  metadata:
+    jiraProjectId: SPPM
+    githubTeamId: coretech/team_sppm_code_owners
+    teamSlackChannel: team_sppm
+    resourceOwner: carlos.castillo@idt.net
+
+  owners:
+    stakeholders:
+      - manan.patel@idt.net
+
+    productOwners:
+      - manan.patel@idt.net
+
+    technicalExperts:
+      - yung.chang@idt.net
+
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      - email: carlos.castillo@idt.net
+        githubUsername: ccastillo
+        ldapUid: cacastillo
+      - email: yung.chang@idt.net
+        githubUsername: yungchan
+        ldapUid: ychang
+      - email: manan.patel@idt.net
+        githubUsername: manpatel
+        ldapUid: mpatel
+      - email: grigoriy.zhidetski@idt.net
+        githubUsername: GregZhidetski
+        ldapUid: gzhidetski
+      - email: David.Natsvlishvili@idt.net
+        githubUsername: david-n
+        ldapUid: dnatsvli
+      - email: Jim.Stone@idt.net
+        githubUsername: jbstone
+        ldapUid: jstone
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers: ~
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  environments:
+    sandbox:
+      envType: lab
+      accountId: 312226949769
+    dev:
+      envType: dev
+      accountId: 470427355418
+    qa:
+      envType: qa
+      accountId: 470427355418
+    uat:
+      envType: uat
+      accountId: 412304547329
+    prod:
+      envType: prod
+      accountId: 412304547329

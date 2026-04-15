@@ -1,0 +1,265 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: csa
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_br_general
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: csa
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: csa
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: CSA
+
+    ## id of github team, starts with "coretech"
+    ## (Optional)
+    githubTeamId: coretech/assets
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team_csa
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: igor.poznyak@idt.net
+
+  ## Business owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - alex.klock@idt.net
+      - magdalena.keremedtchieva@idt.net
+      - bindu.vaishnani@idt.net
+      - johanna.hanrahan@idt.net
+      ## (Required)
+    productOwners:
+      - vitali.hrachov@idt.net
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - igor.poznyak@idt.net
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      - email: dan.ivanov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: danivanovidt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: divanov
+      - email: magdalena.keremedtchieva@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: mkeremed
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: mkeremed
+      - email: bindu.vaishnani@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: bvaishnaniIDT
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: bvaishna
+      - email: roman.bondarenko@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: hollandets
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: rbondarenko
+      - email: fazil.asadullayev@idt.net
+        githubUsername: fazil-asadullayev-idt
+        ldapUid: fasadullayev
+      - email: johanna.hanrahan@idt.net
+        githubUsername: jhanrahanIDT
+        ldapUid: jhanrahan
+      - email: daniel.totaro@idt.net
+        githubUsername: IDTdtotaro
+        ldapUid: dtotaro
+      - email: vaughn.nobles@idt.net
+        githubUsername: vnobles
+        ldapUid: vnobles
+      - email: igor.poznyak@idt.net
+        githubUsername: ivpoznyak
+        ldapUid: ipoznyak
+      - email: andrei.sianchuk@idt.net
+        githubUsername: andrei-sianchuk-idt
+        ldapUid: asianchuk
+      - email: yauheni.zhukovich@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: yzhukovich-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: yzhukovich
+      - email: paul.mihailov@idt.net
+        githubUsername: TristanMaximus
+        ldapUid: pmihailov
+      - email: angelina.shabaltas@idt.net
+        githubUsername: AShabaltas
+        ldapUid: ashabaltas
+      - email: mustafa.husein@idt.net
+        githubUsername: MustafaMZH
+        ldapUid: mhusein
+      - email: yury.bradzinski@idt.net
+        githubUsername: yury-bradzinski-idt
+        ldapUid: ybradzinski
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      - email: anton.serhiyenka@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: aserhiyenka
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: aserhiyenka
+      - email: alina.molochko@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: Alina-Molochko
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: amolochko
+      - email: noelia.florero@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: NoeliaFlorero
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: nflorero
+      - email: aliaksei.niaklesa@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: alexeyNeklesa-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: aniaklesa
+      - email: viktar.vinitski@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: vvinitski-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: vvinitski
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    mongo-sync-services-dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    mongo-services-dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    plan-services-dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    services-qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    mongo-sync-services-qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    mongo-services-qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    plan-services-qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    public-qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    uat:
+      envType: uat
+      accountId: 412304547329
+      vaultSupport: true
+    services-uat:
+      envType: uat
+      accountId: 412304547329
+      vaultSupport: true
+    mongo-sync-services-uat:
+      envType: uat
+      accountId: 412304547329
+      vaultSupport: true
+    mongo-services-uat:
+      envType: uat
+      accountId: 412304547329
+      vaultSupport: true
+    plan-services-uat:
+      envType: uat
+      accountId: 412304547329
+      vaultSupport: true
+    prod:
+      envType: prod
+      accountId: 412304547329
+      vaultSupport: true
+      protected: true
+    services-prod:
+      envType: prod
+      accountId: 412304547329
+      vaultSupport: true
+      protected: false
+    mongo-sync-services-prod:
+      envType: prod
+      accountId: 412304547329
+      vaultSupport: true
+      protected: true
+    mongo-services-prod:
+      envType: prod
+      accountId: 412304547329
+      vaultSupport: true
+      protected: true
+    plan-services-prod:
+      envType: prod
+      accountId: 412304547329
+      vaultSupport: true
+      protected: true
+    public-prod:
+      envType: prod
+      accountId: 412304547329
+      vaultSupport: true
+      protected: true

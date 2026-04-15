@@ -1,0 +1,36 @@
+---
+asset:
+  name: terra-tests
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devops
+    applicationGroup: devops-test
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: devops@idt.net
+
+  owners:
+    stakeholders:
+      - devops@idt.net
+    productOwners:
+      - devops@idt.net
+    technicalExperts:
+      - devops@idt.net
+
+  users:
+    admins: ~
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 445309495976
+      protected: false
+      vaultSupport: true # we need that for vault kitchen tests

@@ -1,0 +1,172 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: rtcctl-pars
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required) Used for AWS Tags
+    lob: tech_dev_reseller
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: team-rtcctl
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationsGroup: n2p-office
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional) Used for AWS Tags
+    jiraProjectId: ~
+    ## (Optional)
+    githubTeamId: ~
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team-rtcctl
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: ~
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - jonah.fink@net2phone.com
+
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - mary.mcshea@idt.net
+
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - richard.beckman@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member .
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      - email: richard.beckman@idt.net
+        githubUsername: rbeckman
+        ldapUid: rbeckman
+      - email: kesavan.pandian@idt.net
+        githubUsername: kesavanpandian
+        ldapUid: kpandi
+      - email: angelo.mutarelli@idt.net
+        githubUsername: amutarelli
+        ldapUid: amutarelli
+      - email: carlos.castillo@idt.net
+        githubUsername: ccastillo
+        ldapUid: cacastillo
+      - email: alexander.polonevich@idt.net
+        githubUsername: polonevitch
+        ldapUid: apolonevich
+      - email: bayron.calderon@idt.net
+        githubUsername: bayroncalderon
+        ldapUid: bcalderon
+      - email: aleh.linkin@idt.net
+        githubUsername: Maledictus
+        ldapUid: alinkin
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      - email: maxim.zhiburt@idt.net
+        githubUsername: zhiburt
+        ldapUid: mzhiburt
+      - email: maria.izobova@idt.net
+        githubUsername: MariaIzobova
+        ldapUid: mizobova
+      - email: alexander.polonevich@idt.net
+        githubUsername: polonevitch
+        ldapUid: apolonevich
+      - email: bayron.calderon@idt.net
+        githubUsername: bayroncalderon
+        ldapUid: bcalderon
+      - email: aleh.linkin@idt.net
+        githubUsername: Maledictus
+        ldapUid: alinkin
+      - email: yuri.kiriachek@idt.net
+        githubUsername: ykiriachek
+        ldapUid: ykiriachek
+      - email: vladislav.strakh@idt.net
+        githubUsername: VladStrakh
+        ldapUid: vstrakh
+      - email: shahid.shaik@idt.net
+        githubUsername: ShahidShaik
+        ldapUid: sshaik
+      - email: abhilash.ramadugu@idt.net
+        githubUsername: AbhilashRamadugu
+        ldapUid: aramadugu
+      - email: carlos.castillo+vmaildev@idt.net
+        githubUsername: ccastillo
+        ldapUid: 84a7556f-058a-8241-e1d7-b2d8ea29236d
+      - email: carlos.castillo+vmailprod@idt.net
+        githubUsername: ccastillo
+        ldapUid: 36629f30-5507-ca79-f410-0f507a4c0827
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: 
+      - email: vladislav.strakh@idt.net
+        githubUsername: VladStrakh
+        ldapUid: vstrakh
+      - email: alexander.polonevich@idt.net
+        githubUsername: polonevitch
+        ldapUid: apolonevich
+      - email: bayron.calderon@idt.net
+        githubUsername: bayroncalderon
+        ldapUid: bcalderon
+      - email: aleh.linkin@idt.net
+        githubUsername: Maledictus
+        ldapUid: alinkin
+      - email: yuri.kiriachek@idt.net
+        githubUsername: ykiriachek
+        ldapUid: ykiriachek
+      - email: shahid.shaik@idt.net
+        githubUsername: ShahidShaik
+        ldapUid: sshaik
+      - email: abhilash.ramadugu@idt.net
+        githubUsername: AbhilashRamadugu
+        ldapUid: aramadugu
+
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.\ .
+  ## (Required)
+  environments:
+    ## Environment name ([a-z0-9-]+)
+    ## (Required)
+    sandbox:
+      envType: lab
+      accountId: 312226949769
+      vaultSupport: true
+    dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    uat:
+      envType: uat
+      accountId: 412304547329
+      vaultSupport: true
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+      vaultSupport: true

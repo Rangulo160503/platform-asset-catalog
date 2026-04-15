@@ -1,0 +1,174 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: core-services
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_br_general
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: team_coreservices
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationsGroup: core-services
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: CORES
+    ## id of github team, starts with @coretech
+    ## (Optional)
+    githubTeamId: coretech/boss-core-services
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team_coreservices
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: alexey.chudnikov@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - alexey.chudnikov@idt.net
+
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - domenico.riggi@idt.net
+
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - domenico.riggi@idt.net
+      - artsiom.shabolda@idt.net
+      - ivan.gromyko@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      - email: domenico.riggi@idt.net
+        githubUsername: driggi
+        ldapUid: driggi
+      - email: alexey.chudnikov@idt.net
+        githubUsername: goodml
+        ldapUid: achudnikov
+      - email: artsiom.shabolda@idt.net
+        githubUsername: artsiom-shabolda
+        ldapUid: ashabolda
+      - email: vitali.tomashevich@idt.net
+        githubUsername: vtomashevich
+        ldapUid: vtomashevich
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      - email: ivan.gromyko@idt.net
+        githubUsername: HromykoIvan
+        ldapUid: igromyko
+      - email: ilya.shibut@idt.net
+        githubUsername: ShpikOne
+        ldapUid: ishibut
+      - email: artsiom.shabolda@idt.net
+        githubUsername: artsiom-shabolda
+        ldapUid: ashabolda
+      - email: aliaksandr.valdaitsau@idt.net
+        githubUsername: aliaksandr-valdaitsau-idt
+        ldapUid: avaldaitsau
+      - email: evgeni.trukhan@idt.net
+        githubUsername: YauheniTrukhanIDT
+        ldapUid: etrukhan
+      - email: virginia.sanabria@idt.net
+        githubUsername: virginiaSanabria
+        ldapUid: vsanabria
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers:
+      - email: volha.maskalenka@idt.net
+        githubUsername: volha-maskalenka-idt
+        ldapUid: vmaskalenka
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    ## Environment name ([a-z0-9-]+)
+    ## (Required)
+    sandbox:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: lab
+      ## AWS account ID
+      ## (Required)
+      accountId: 312226949769
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      # protected: false
+    qa-arm:
+      envType: qa
+      accountId: 470427355418
+      protected: true
+    qa-emms:
+      envType: qa
+      accountId: 470427355418
+      protected: true
+    qa-2:
+      envType: qa
+      accountId: 470427355418
+      protected: false
+    qa-mkt:
+      envType: qa
+      accountId: 470427355418
+      protected: true
+    qa-mkt-arm:
+      envType: qa
+      accountId: 470427355418
+      protected: true
+    qa-gen:
+      envType: qa
+      accountId: 470427355418
+      protected: true
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+    prod-2:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+    prod-mkt:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+    prod-mkt-arm:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+    prod-gen:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+    prod-arm:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+    pr-emms:
+      envType: prod
+      accountId: 412304547329
+      protected: true

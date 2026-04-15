@@ -1,0 +1,93 @@
+asset:
+  name: team-pi
+
+  globalMetadata:
+    lob: tech_dev_money_remittance
+    scrumTeam: PI
+    applicationGroup: team-pi
+
+  metadata:
+    jiraProjectId: PI
+    githubTeamId: coretech/team_pi
+    teamSlackChannel: team_partner_integrations
+    resourceOwner: alexander.biarozka@idt.net
+
+  owners:
+    stakeholders:
+      - valery.leontyev@idt.net
+    productOwners:
+      - yusuf.samantar@idt.net
+    technicalExperts:
+      - alexander.biarozka@idt.net
+
+  users:
+    admins:
+      - email: dzmitry.martavoi@idt.net
+        githubUsername: martavoi
+        ldapUid: dmartavoi
+      - email: valery.leontyev@idt.net
+        githubUsername: valery-leontyev-idt
+        ldapUid: vleontyev
+      - email: stanislav.badov@idt.net
+        githubUsername: stanislav-badov-idt
+        ldapUid: sbadov
+      - email: alexander.biarozka@idt.net
+        githubUsername: aliaksandr-biarozka
+        ldapUid: abiarozka
+      - email: alexey.bondarovitch@idt.net
+        githubUsername: alexey-bondarovitch-idt
+        ldapUid: abondarovitch
+
+    maintainers:
+      - email: juan.aitken@idt.net
+        githubUsername: jpaitkeng
+        ldapUid: jaitken
+      - email: franco.aldunate@idt.net
+        githubUsername: franco-aldunate-idt
+        ldapUid: faldunate
+      - email: daniil.boushys@idt.net
+        githubUsername: daniilBoushys
+        ldapUid: dboushys
+      - email: kevin.cruz@idt.net
+        githubUsername: kevarie
+        ldapUid: kecruz
+      - email: josue.morales@idt.net
+        githubUsername: josuemoralesIDT
+        ldapUid: josumorales
+      - email: javier.estrada@idt.net
+        githubUsername: javierestradadev
+        ldapUid: jestrada
+      - email: benjamin.izquierdo@idt.net
+        githubUsername: BenjaminIzquierdo-RCH
+        ldapUid: jbizquierdo
+
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+      protected: false
+      vpcName: generic
+      vaultSupport: false
+
+    qa:
+      envType: qa
+      accountId: 470427355418
+      protected: false
+      vpcName: generic
+      vaultSupport: false
+
+    uat:
+      envType: uat
+      accountId: 412304547329
+      protected: false
+      vpcName: generic
+      vaultSupport: false
+
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+      vpcName: generic
+      vaultSupport: false

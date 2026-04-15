@@ -1,0 +1,50 @@
+---
+asset:
+  name: kyurtsevich
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devtools
+    applicationGroup: kyurtsevich
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: kanstantsin.yurtsevich@idt.net
+
+  owners:
+    stakeholders:
+      - kanstantsin.yurtsevich@idt.net
+    productOwners:
+      - kanstantsin.yurtsevich@idt.net
+    technicalExperts:
+      - kanstantsin.yurtsevich@idt.net
+
+  users:
+    admins:
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: kanstantsin.yurtsevich@idt.net
+        githubUsername: kyurtsevich
+        ldapUid: kyurtsevich
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+      vaultSupport: true

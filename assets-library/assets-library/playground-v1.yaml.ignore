@@ -1,0 +1,74 @@
+# test
+asset:
+  name: playground-v1
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devops
+    applicationGroup: playground-v1
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: devops@idt.net
+
+  owners:
+    stakeholders:
+      - keith.powe@idt.net
+    productOwners:
+      - alexey.chudnikov@idt.net
+    technicalExperts:
+      - eytan.faverman-test@idt.net
+
+  users:
+    admins:
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: mikalai.hryb@idt.net
+        githubUsername: mikalai-hryb-idt
+        ldapUid: mhryb
+      - email: devops_test_1@idt.net
+        githubUsername: devops_test_1
+        ldapUid: devops_test_1
+
+    maintainers:
+      - email: devops_test_1@idt.net
+        githubUsername: devops_test_1
+        ldapUid: devops_test_1
+
+    developers:
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: devops_test_1@idt.net
+        githubUsername: devops_test_1
+        ldapUid: devops_test_1
+
+  environments:
+    sand:
+      envType: lab
+      accountId: 312226949769
+      protected: false
+      vpcName: generic
+    dev:
+      envType: dev
+      accountId: 833915412828
+    dev1:
+      envType: dev
+      accountId: 833915412828
+    dev-pro:
+      envType: dev
+      accountId: 833915412828
+    qa:
+      envType: qa
+      accountId: 470427355418
+      protected: false
+    qav1:
+      envType: qa
+      accountId: 470427355418
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: false

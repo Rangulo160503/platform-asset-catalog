@@ -1,0 +1,97 @@
+# Marked for decommission
+asset:
+  name: mt-infra
+
+  globalMetadata:
+    lob: tech_dev_money_remittance
+    scrumTeam: MTI
+    applicationGroup: mt-infra
+
+  metadata:
+    jiraProjectId: MTI
+    githubTeamId: coretech/boss-mti
+    teamSlackChannel: team_mt_infra
+    resourceOwner: alexander.biarozka@idt.net
+
+  owners:
+    stakeholders:
+      - valery.leontyev@idt.net
+    productOwners:
+      - yusuf.samantar@idt.net
+    technicalExperts:
+      - alexander.biarozka@idt.net
+
+  users:
+    admins:
+      - email: dzmitry.martavoi@idt.net
+        githubUsername: martavoi
+        ldapUid: dmartavoi
+      - email: valery.leontyev@idt.net
+        githubUsername: valery-leontyev-idt
+        ldapUid: vleontyev
+      - email: stanislav.badov@idt.net
+        githubUsername: stanislav-badov-idt
+        ldapUid: sbadov
+      - email: alexander.biarozka@idt.net
+        githubUsername: aliaksandr-biarozka
+        ldapUid: abiarozka
+
+    maintainers:
+      - email: andrew.lebedev@idt.net
+        githubUsername: anlebedev
+        ldapUid: alebedev
+      - email: alexey.bondarovitch@idt.net
+        githubUsername: alexey-bondarovitch-idt
+        ldapUid: abondarovitch
+      - email: juan.aitken@idt.net
+        githubUsername: jpaitkeng
+        ldapUid: jaitken
+      - email: tatyana.benkovskaya@idt.net
+        githubUsername: tatyana-benk1204
+        ldapUid: tbenkovskaya
+      - email: aidar.iakupov@idt.net
+        githubUsername: aidariakupov
+        ldapUid: aiakupov
+      - email: daniil.boushys@idt.net
+        githubUsername: daniilBoushys
+        ldapUid: dboushys
+      - email: aleksey.fomenko@idt.net
+        githubUsername: AlekseyFomenkoIDT
+        ldapUid: afomenko
+      - email: igor.tatarnikov@idt.net
+        githubUsername: igor-tatarnikov-idt
+        ldapUid: itatarnikau
+      - email: aliaksei.halushkin@idt.net
+        githubUsername: aliaksei-halushkin-idt
+        ldapUid: ahalushkin
+
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+      protected: false
+      vpcName: generic
+      vaultSupport: false
+
+    qa:
+      envType: qa
+      accountId: 470427355418
+      protected: false
+      vpcName: generic
+      vaultSupport: false
+
+    uat:
+      envType: uat
+      accountId: 412304547329
+      protected: false
+      vpcName: generic
+      vaultSupport: false
+
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+      vpcName: generic
+      vaultSupport: false

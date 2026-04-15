@@ -1,0 +1,48 @@
+asset:
+  name: mercury
+
+  globalMetadata:
+    lob: tech_dev_wholesale
+    scrumTeam: CarrierRouting
+    applicationGroup: hermes
+
+  metadata:
+    jiraProjectId: CRP
+    githubTeamId: coretech/carrier-routing
+    teamSlackChannel: team_carrier_routing
+    resourceOwner: dmitriy.kargapolov@idt.net
+
+  owners:
+    stakeholders:
+      - francisco.davila@idt.net
+    productOwners:
+      - anthony.davidson@idt.net
+    technicalExperts:
+      - dmitriy.kargapolov@idt.net
+      - dmitry.klionsky@idt.net
+
+  users:
+    admins:
+      - email: dmitriy.kargapolov@idt.net
+        githubUsername: x0id
+        ldapUid: dkarga
+      - email: dmitry.klionsky@idt.net
+        githubUsername: ten0s
+        ldapUid: dklionsky
+      - email: inna.golovchtchikova@idt.net
+        githubUsername: igolov
+        ldapUid: igolovchtchikova
+      - email: abhilash.ramadugu@idt.net
+        githubUsername: onepiece2022
+        ldapUid: aramadugu
+      - email: shahid.shaik@idt.net
+        githubUsername: shaikidt
+        ldapUid: sshaik
+    maintainers: ~
+    developers: ~
+
+  environments:
+    voip:
+      envType: prod
+      accountId: 102061527357
+      protected: false

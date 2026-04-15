@@ -1,0 +1,63 @@
+asset:
+  name: car-tools
+
+  globalMetadata:
+    lob: tech_dev_wholesale
+    scrumTeam: team_carrier_tools
+    applicationGroup: car-tools
+
+  metadata:
+    jiraProjectId: CARRIERQUEUE
+    githubTeamId: coretech/carrier-tools
+    teamSlackChannel: team_carrier_tools
+    resourceOwner: carrier-tools-dev@idt.net
+
+  owners:
+    stakeholders:
+      - anthony.davidson@idt.net
+    productOwners:
+      - anthony.davidson@idt.net
+    technicalExperts:
+      - inna.golovchtchikova@idt.net
+
+  users:
+    admins:
+      - email: manan.patel@idt.net
+        githubUsername: manpatel
+        ldapUid: mpatel
+      - email: inna.golovchtchikova@idt.net
+        githubUsername: igolov
+        ldapUid: igolovchtchikova
+      - email: alexander.sheleh@idt.net
+        githubUsername: alexander-sheleh
+        ldapUid: asheleh
+      - email: alexandr.sohonevich@idt.net
+        githubUsername: asohonevich
+        ldapUid: asohonevich
+      - email: anton.levchuk@idt.net
+        githubUsername: levchukantonidt
+        ldapUid: alevchuck
+      - email: stanislau.hlushakou@idt.net
+        githubUsername: stanislau-hlushakou-idt
+        ldapUid: shlushakou
+    maintainers:
+      - email: natallia.klemiata@idt.net
+        githubUsername: nklemiata-idt
+        ldapUid: nklemiata
+    developers: ~
+
+  environments:
+    qa:
+      envType: qa
+      accountId: 770547774792
+      protected: false
+      vpcName: generic
+      vaultSupport: true
+      allowApplyInParallelWithOtherEnvironments: false
+    production:
+      envType: prod
+      accountId: 805198863187
+      protected: true
+      vpcName: generic
+      vaultSupport: true
+      allowApplyInParallelWithOtherEnvironments: false

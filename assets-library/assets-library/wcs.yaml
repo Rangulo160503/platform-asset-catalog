@@ -1,0 +1,118 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: wcs
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_imtu
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: team_wcs
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: wholesale_services
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: WCS
+
+    ## id of github team, starts with "coretech"
+    ## (Optional)
+    githubTeamId: coretech/wcs-developers
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team_wholesale_channel_services
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: valery.kirichenko@idt.net
+
+  ## Business owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - valery.kirichenko@idt.net
+      - emilio.delrio@idt.net
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - david.phelps@idt.net
+      - keith.niechwiadowicz@idt.net
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - artsiom.kazlouski@idt.net
+      - dzmitry.kasenka@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: valery.kirichenko@idt.net
+        githubUsername: kirychenkav
+        ldapUid: vkirichenko
+      - email: david.phelps@idt.net
+        githubUsername: dphelpsIDT
+        ldapUid: dphelps
+      - email: artsiom.kazlouski@idt.net
+        githubUsername: ArtsiomKazlouski
+        ldapUid: akazlouski
+      - email: dzmitry.kasenka@idt.net
+        githubUsername: dkasenka
+        ldapUid: dkasenka
+      - email: vladislav.molochko@idt.net
+        githubUsername: DjVreditel
+        ldapUid: vmolochko
+      - email: anastasiia.mironova@idt.net
+        githubUsername: anamironova
+        ldapUid: amironova
+      - email: timur.irmatov@idt.net
+        githubUsername: idtirmatov
+        ldapUid: tirmatov
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      - email: vladislav.molochko@idt.net
+        githubUsername: DjVreditel
+        ldapUid: vmolochko
+      - email: artsiom.yankouski@idt.net
+        githubUsername: artsiomyankouski
+        ldapUid: ayankouski
+      - email: ivan.ramanovich@idt.net
+        githubUsername: ivan-ramanovich
+        ldapUid: iramanovich
+      - email: hanna.khamiakova@idt.net
+        githubUsername: HannaKhomyakova
+        ldapUid: hkhamiakova
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    dev:
+      envType: dev
+      accountId: 117521322591

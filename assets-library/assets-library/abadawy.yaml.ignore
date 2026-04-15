@@ -1,0 +1,129 @@
+# Marked for the decommission, once https://github.com/coretech/abadawy-terra-live/tree/master/aws is empty
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: abadawy
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_infrastructure
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: team_devops
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: abadawy
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: DEVOPS
+
+    ## id of github team, starts with @coretech
+    ## (Optional)
+    githubTeamId: coretech/core-administrators
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team_devops
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: ahmed.badawy@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - ahmed.badawy@idt.net
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - ahmed.badawy@idt.net
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - ahmed.badawy@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each memeber will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      - ## Email address, ends with @idt.net
+        ##  (Required)
+        email: eytan.faverman@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: efaverman
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: efaverman
+      - ## Email address, ends with @idt.net
+        ##  (Required)
+        email: ahmed.badawy@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: ahmedbadawy4
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: abadawy
+
+    ## List of Asset Maintainers. Each memeber will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers: ~
+
+    ## List of Asset Developers. Each memeber will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    ## test PR
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    ## Environment name ([a-z0-9-]+)
+    ## (Required)
+    sand:
+      envType: lab
+      accountId: 312226949769
+      protected: false
+    dev:
+      envType: dev
+      protected: false
+      accountId: 833915412828
+    dev1:
+      envType: dev
+      protected: false
+      accountId: 833915412828
+    dev-pro:
+      envType: dev
+      protected: false
+      accountId: 833915412828
+    qa:
+      envType: qa
+      protected: false
+      accountId: 470427355418
+    qav1:
+      envType: qa
+      protected: false
+      accountId: 470427355418
+    n2p-dev:
+      envType: dev
+      protected: false
+      accountId: 542258342574

@@ -1,0 +1,79 @@
+# test
+asset:
+  name: roman
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: DevOps
+    applicationGroup: roman
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: roman.vaskevich@idt.net
+
+  owners:
+    stakeholders:
+      - roman.vaskevich@idt.net
+    productOwners:
+      - roman.vaskevich@idt.net
+    technicalExperts:
+      - roman.vaskevich@idt.net
+
+  users:
+    admins:
+      - email: ivan.polonevich@idt.net
+        githubUsername: Joni-Lover
+        ldapUid: ipolonevich
+      - email: andrei.shahun@idt.net
+        githubUsername: misternobody
+        ldapUid: ashahun
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: roman.vaskevich@idt.net
+        githubUsername: RamanVaskevich1984
+        ldapUid: rvaskevich
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    sand:
+      envType: lab
+      accountId: 312226949769
+      protected: false
+      vpcName: generic
+    dev:
+      envType: dev
+      accountId: 833915412828
+    dev1:
+      envType: dev
+      accountId: 833915412828
+    dev-pro:
+      envType: dev
+      accountId: 833915412828
+    qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    qav1:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    n2p_dev:
+      envType: dev
+      accountId: 542258342574
+    n2pdevv1:
+      envType: dev
+      accountId: 542258342574
+    n2p_prod:
+      envType: prod
+      accountId: 577533758790
+      protected: true
+    n2pprod1v:
+      envType: prod
+      accountId: 577533758790
+      protected: true

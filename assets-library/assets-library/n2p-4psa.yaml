@@ -1,0 +1,141 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: n2p-4psa
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_n2p_office
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: veops
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: veops
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: VEOPS
+
+    ## id of github team, starts with @coretech
+    ## (Optional)
+    githubTeamId: coretech/n2p-calling-server
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: n2p-calling-server
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: maksim.schurov@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - zali.ritholtz@idt.net
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - jeffrey.skelton@idt.net
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - maksim.schurov@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each memeber will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      - email: maksim.schurov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: mschurov
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: mschurov
+      - email: alexander.dyubkov@idt.net
+        githubUsername: alexdyubkov
+        ldapUid: adyubkov
+      - email: angelo.mutarelli@idt.net
+        githubUsername: amutarelli
+        ldapUid: amutarelli
+      - email: esteban.macri@net2phone.com
+        githubUsername: emacri
+        ldapUid: emacri
+      - email: kesavan.pandian@idt.net
+        githubUsername: kpandian
+        ldapUid: kpandi
+      - email: matt.nielsen@idt.net
+        githubUsername: mnielsen
+        ldapUid: mnielsen
+      - email: richard.beckman@idt.net
+        githubUsername: rbeckman
+        ldapUid: rbeckman
+      - email: kirill.klimenkov@idt.net
+        githubUsername: kklimenkov
+        ldapUid: kklimenkov
+    ## List of Asset Maintainers. Each memeber will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      - email: aliaksei.arlou@idt.net
+        githubUsername: aarlou
+        ldapUid: aarlou
+      - email: santpal.goel@idt.net
+        githubUsername: sgoel
+        ldapUid: sgoel
+      - email: alexander.glovko@idt.net
+        githubUsername: aglovko
+        ldapUid: aglovko
+      - email: carlos.borja@idt.net
+        githubUsername: cborja
+        ldapUid: cborja
+      - email: jose.paz@net2phone.com
+        githubUsername: jpaz
+        ldapUid: jpaz
+      - email: santiago.romero@net2phone.com
+        githubUsername: sromero
+        ldapUid: sromero
+      - email: eric.frisch@idt.net
+        githubUsername: erisch
+        ldapUid: efrisch
+      - email: douglas.arana@idt.net
+        githubUsername: darana
+        ldapUid: darana
+      - email: yusela.kellerman@net2phone.com
+        githubUsername: ykellerman 
+        ldapUid: ykellerman 
+      - email: jose.ralac@net2phone.com
+        githubUsername: jralac
+        ldapUid: jralac
+
+
+    ## List of Asset Developers. Each memeber will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    prod:
+      envType: prod
+      accountId: 577533758790
+      vpcName: calling-server

@@ -1,0 +1,17 @@
+---
+# Yaml linter configuration
+# Linter docs: https://yamllint.readthedocs.io/en/stable/
+extends: default
+
+yaml-files:
+  - '*.yaml'
+  - '*.yml'
+rules:
+  trailing-spaces:
+    level: warning
+
+  # don't bother me with these rules
+  indentation: disable
+  truthy: disable
+  document-start: disable
+  line-length: disable

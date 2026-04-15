@@ -1,0 +1,153 @@
+# Marked for the decommission https://idtjira.atlassian.net/browse/DEVOPS-3264
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: emil
+  ## Is this asset related to global infrastructure level.
+  ## Whether the asset will be applied restrictive rules flow or not.
+  ## (Optional) Defaults false
+  infrastructure: false
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_infrastructure
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: team_devops
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: devops-test
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: DEVOPS
+
+    ## id of github team, starts with "coretech"
+    ## (Optional)
+    githubTeamId: coretech/core-administrators
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team_devops
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: emil.aliyev@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - emil.aliyev@idt.net
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - emil.aliyev@idt.net
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - emil.aliyev@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: emil.aliyev@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: ealiyev
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: ealiyev
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers: ~
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    ## Environment name ([a-z0-9-]+)
+    ## (Required)
+    sand:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: lab
+      ## AWS account ID
+      ## (Required)
+      accountId: 312226949769
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic
+      ## Vault support for the environment
+      ## If it's set to True, Vault resources and IAM role will be created
+      ## (Optional) Defaults false
+      vaultSupport: true
+      ## Allow applying to multiple environments/accounts in parallel.
+      ## If it's set to True, allow applying changes to that environment with others in the same run with parallel mode.
+      ## (Optional) Defaults `false` for `envType:prod`
+      allowApplyInParallelWithOtherEnvironments: true
+    dev:
+      envType: dev
+      accountId: 833915412828
+      protected: false
+      vpcName: generic
+      vaultSupport: true
+      allowApplyInParallelWithOtherEnvironments: true
+    dev1:
+      envType: dev
+      accountId: 833915412828
+      protected: false
+      vpcName: generic
+      vaultSupport: true
+      allowApplyInParallelWithOtherEnvironments: true
+    dev-pro:
+      envType: dev
+      accountId: 833915412828
+      protected: false
+      vpcName: generic
+      vaultSupport: true
+      allowApplyInParallelWithOtherEnvironments: true
+    qa:
+      envType: qa
+      accountId: 470427355418
+      protected: false
+      vpcName: generic
+      vaultSupport: true
+      allowApplyInParallelWithOtherEnvironments: true
+    qav1:
+      envType: qa
+      accountId: 470427355418
+      protected: false
+      vpcName: generic
+      vaultSupport: true
+      allowApplyInParallelWithOtherEnvironments: true

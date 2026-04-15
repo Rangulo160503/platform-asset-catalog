@@ -1,0 +1,68 @@
+# Marked for the decommission
+asset:
+  name: yury
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: DevOps
+    applicationGroup: ystsefanovich
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: yury.stsefanovich@idt.net
+
+  owners:
+    stakeholders:
+      - keith.powe@idt.net
+    productOwners:
+      - george.lerma@idt.net
+    technicalExperts:
+      - eytan.faverman@idt.net
+
+  users:
+    admins:
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: yury.stsefanovich@idt.net
+        githubUsername: stsefanovich
+        ldapUid: ystsefanovich
+
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    sand:
+      envType: lab
+      accountId: 312226949769
+      protected: false
+      vpcName: generic
+    dev:
+      envType: dev
+      accountId: 833915412828
+    dev1:
+      envType: dev
+      accountId: 833915412828
+    dev-pro:
+      envType: dev
+      accountId: 833915412828
+    qa:
+      envType: qa
+      accountId: 470427355418
+    qav1:
+      envType: qa
+      accountId: 470427355418
+    n2p_dev:
+      envType: dev
+      accountId: 542258342574
+    n2p_prod:
+      envType: prod
+      accountId: 577533758790
+    n2p_prod-v2:
+      envType: prod
+      accountId: 577533758790
+      vpcName: generic-v2      

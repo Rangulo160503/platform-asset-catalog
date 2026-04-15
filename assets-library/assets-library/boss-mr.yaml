@@ -1,0 +1,597 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: boss-mr
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    ##
+    ## lob: tech_dev_mt_retail
+    lob: tech_dev_money_remittance
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: mr
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: boss-mr
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: MT
+
+    ## id of github team, starts with "coretech"
+    ## (Optional)
+    githubTeamId: coretech/boss-mr
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team_mr
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: team-mr@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - denis.abramovich2@idt.net
+      ## (Required)
+    productOwners:
+      - yusuf.samantar@idt.net
+      ## List of Technical Experts
+      ## (Required)
+    technicalExperts:
+      - dzmitry.martavoi@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: dzmitry.martavoi@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: martavoi
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: dmartavoi
+      - email: vladislav.morozov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: VladislavMorozovIDT
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: vmorozov
+      - email: german.chukhrai@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: gchukhrai
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: gchukhrai
+      - email: dzmitry.khralovich@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: dzmitry-khralovich
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: dkhralovich
+      - email: zauri.nikabadze@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: Zako-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: znikabadze
+      - email: raman.shreitar@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: ramanshreitar-tech
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: rshreitar
+      - email: mikhail.zuev@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: mikhail-zuev-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: mzuev
+      - email: mikhail.musin@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: mikhail-musin-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: mmusin
+      - email: vitaly.zhuravkov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: vitaly-zhuravkov
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: vzhuravkov
+      - email: anton.kapustin@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: AntonyKapustin
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: akapustin
+      - email: alexander.biarozka@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: aliaksandr-biarozka
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: abiarozka
+      - email: nikita.demidenko@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: ndemidenko
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: ndemidenko
+      - email: roman.barantsevich@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: rbarantsevich
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: rbarantsevich
+      - email: evgeny.petrushevsky@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: epetrushevsky
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: epetrushevsky
+      - email: alexey.bogdan@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: AlexeyBogdan95
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: abogdan
+      - email: furkan.celebi@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: furkan-celebi
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: fcelebi
+      - email: aliaksandr.dzivovich@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: Lowwess
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: adzivovich
+      - email: maksim.kudrautsau@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: maksim-kudrautsau-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: mkudrautsau
+      - email: andrew.lebedev@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: anlebedev
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: alebedev
+      - email: alexey.bondarovitch@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: alexey-bondarovitch-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: abondarovitch
+      - email: daniil.boushys@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: daniilBoushys
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: dboushys
+      - email: aidar.iakupov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: aidariakupov
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: aiakupov
+      - email: mikita.kislou@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: mikita-kislou
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: mkislou
+      - email: aleksandr.gribanov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: AleksandrGribanov
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: agribanov
+      - email: aleksey.fomenko@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: AlekseyFomenkoIDT
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: afomenko
+      - email: stanislau.shaludchanka@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: stanislaushaludchankaidt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: sshaludchanka
+      - email: rivka.cogan@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: rcogan
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: rcogan
+      - email: nikita.kharashun@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: nkharashun
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: nkharashun
+      - email: igor.tatarnikov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: igor-tatarnikov-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: itatarnikau
+      - email: leandre.nsengumuremyi@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: dreking
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: lnsengumuremyi
+      - email: pavel.valadzko@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: valadzko
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: pvaladzko
+      - email: nikita.kliushnikov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: nikita-kliushnikov-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: nkliushnikov
+      - email: yuliya.shatrauskaya@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: yuliya-shatrauskaya-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: yshatrauskaya
+      - email: stanislav.badov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: stanislav-badov-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: sbadov
+        ## Email address, ends with @idt.net
+        ##  (Required)
+      - email: walter.mercado@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: iRetlaWM
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: wmercado
+        ## Email address, ends with @idt.net
+        ##  (Required)
+      - email: elena.sidina@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: ElenaSidina
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: esidina
+      - email: sergey.dubovik@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: sergg-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: sdubovik
+      - email: artem.gladkikh@idt.net
+        githubUsername: gladkikhartem
+        ldapUid: agladkikh
+      - email: bahdan.pazniak@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: poznyakbogdan2
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: bpazniak
+      - email: dzmitry.korzh@idt.net
+        githubUsername: dzmitrykorzh-idt
+        ldapUid: dmkorzh
+      - email: alberto.cucchiani@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: weregoat
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: acucchiani
+      - email: aliaksandr.smirnou@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: aliaksandr-smirnou-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: asmirnou
+      - email: alexey.dozortsev@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: alexey-dozortsev-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: adozortsev
+      - email: anton.chertovich@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: anton-chertovich-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: achertovich
+      - email: oleg.goncharov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: oleg-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: ogoncharov
+      - email: aliaksei.niaustruyeu@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: AlekseyNevstruev
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: aniaustruyeu
+      - email: tornike.gogberashvili@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: tornike-gogberashvili-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: tgogberashvili
+      - email: eino.lilius@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: elilius
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: elilius
+      - email: aliaksei.kleshchykau@idt.net
+        githubUsername: aliaksei-kleshchykau-idt
+        ldapUid: akleshchykau
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: dziana.artsiomenka@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: artdiana
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: dartsiomenka
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: vlad.ratina@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: vladislav-ratina-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: vratina
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: raul.cabero@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: rcaberoidt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: rcabero
+      - email: juan.aitken@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: jpaitkeng
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: jaitken
+      - email: franco.aldunate@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: franco-aldunate-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: faldunate
+      - email: tatyana.benkovskaya@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: tatyana-benk1204
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: tbenkovskaya
+      - email: roman.bondarenko@idt.net
+        githubUsername: hollandets
+        ldapUid: rbondarenko
+      - email: dan.ivanov@idt.net
+        githubUsername: danivanovidt
+        ldapUid: divanov
+      - email: magdalena.keremedtchieva@idt.net
+        githubUsername: mkeremed
+        ldapUid: mkeremed
+      - email: bindu.vaishnani@idt.net
+        githubUsername: bvaishnaniIDT
+        ldapUid: bvaishna
+      - email: mustafa.husein@idt.net
+        githubUsername: mustafaMZH
+        ldapUid: mhusein
+      - email: daniel.totaro@idt.net
+        githubUsername: IDTdtotaro
+        ldapUid: dtotaro
+      - email: fazil.asadullayev@idt.net
+        githubUsername: fazil-asadullayev-idt
+        ldapUid: fasadullayev
+      - email: siarhei.siamashka@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: siarheisiamashkaidt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: ssiamashka
+      - email: leandre.nsengumuremyi@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: dreking
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: lnsengumuremyi
+      - email: pavel.valadzko@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: valadzko
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: pvaladzko
+      - email: artsiom.lyfar@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: alyfar29
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: alyfar
+      - email: kevin.cruz@idt.net
+        githubUsername: kevarie
+        ldapUid: kecruz
+      - email: josue.morales@idt.net
+        githubUsername: josuemoralesIDT
+        ldapUid: josumorales
+      - email: javier.estrada@idt.net
+        githubUsername: javierestradadev
+        ldapUid: jestrada
+      - email: yahor.staravoitau@idt.net
+        githubUsername: yahor-staravoitau-idt
+        ldapUid: ystaravoitau
+      - email: nikolai.shimanskiy@idt.net
+        githubUsername: NikolaiShimanskiyIDT
+        ldapUid: nshimanskiy
+      - email: patricia.zavaleta@idt.net
+        githubUsername: Pzavaleta19
+        ldapUid: pzavaleta
+      - email: ivan.sachyshyn@idt.net
+        githubUsername: IvanSachishin
+        ldapUid: isachyshyn
+      - email: raman.halouka@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: raman-halouka-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: rhalouka
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    dev:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: dev
+      ## AWS account ID
+      ## (Required)
+      accountId: 833915412828
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic
+
+    qa:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: qa
+      ## AWS account ID
+      ## (Required)
+      accountId: 470427355418
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic
+
+    uat:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: uat
+      ## AWS account ID
+      ## (Required)
+      accountId: 412304547329
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic
+
+    prod:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: prod
+      ## AWS account ID
+      ## (Required)
+      accountId: 412304547329
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic

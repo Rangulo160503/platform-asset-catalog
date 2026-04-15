@@ -1,0 +1,54 @@
+---
+asset:
+  name: dakunevich
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devops_infra
+    applicationGroup: dakunevich
+
+  metadata:
+    jiraProjectId: DEVOPSINF
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops_infra
+    resourceOwner: dmitry.akunevich@idt.net
+
+  owners:
+    stakeholders:
+      - dmitry.akunevich@idt.net
+    productOwners:
+      - dmitry.akunevich@idt.net
+    technicalExperts:
+      - dmitry.akunevich@idt.net
+
+  users:
+    admins:
+      - email: dmitry.akunevich@idt.net
+        githubUsername: dakunevichIDT
+        ldapUid: dakunevich
+      - email: anton.kapustin@idt.net
+        githubUsername: AntonyKapustin
+        ldapUid: akapustin
+
+    maintainers:
+
+    developers:
+
+  environments:
+    sand:
+      envType: lab
+      accountId: 312226949769
+      protected: false
+      vpcName: generic
+    dev:
+      envType: dev
+      protected: false
+      accountId: 833915412828
+    qa-v1:
+      envType: qa
+      protected: false
+      accountId: 470427355418
+    qa-v2:
+      envType: qa
+      protected: false
+      accountId: 470427355418

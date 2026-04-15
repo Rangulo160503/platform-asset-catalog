@@ -1,0 +1,92 @@
+asset:
+  name: mtu-services
+
+  globalMetadata:
+    lob: tech_dev_imtu
+    scrumTeam: team_mtu_oam
+    applicationGroup: mtu-services
+
+  metadata:
+    jiraProjectId: OMTU
+    githubTeamId: coretech/team-mtu-oam
+    teamSlackChannel: team_mtu_oam
+    resourceOwner: viktor.chalyi@idt.net
+
+  owners:
+    stakeholders:
+      - keith.niechwiadowicz@idt.net
+
+    productOwners:
+      - emilio.delrio@idt.net
+
+    technicalExperts:
+      - viktor.chalyi@idt.net
+      - valery.kirichenko@idt.net
+      - ihar.shchuchenka@idt.net
+
+  users:
+    admins:
+      - email: viktor.chalyi@idt.net
+        githubUsername: vchalyi
+        ldapUid: vchalyi
+      - email: david.phelps@idt.net
+        githubUsername: dphelpsIDT
+        ldapUid: dphelps
+      - email: timur.khametov@idt.net
+        githubUsername: timurkhametov
+        ldapUid: tkhametov
+      - email: ilya.kholodov@idt.net
+        githubUsername: ocelot93
+        ldapUid: ikholodov
+      - email: paul.mowatt@idt.net
+        githubUsername: pmowattIDT
+        ldapUid: pmowatt
+      - email: valery.kirichenko@idt.net
+        githubUsername: kirychenkav
+        ldapUid: vkirichenko
+      - email: ihar.shchuchenka@idt.net
+        githubUsername: iharshidt
+        ldapUid: ishchuchenka
+      - email: aliaksandr.shyshla@idt.net
+        githubUsername: aliaksandr-shyshla-idt
+        ldapUid: ashyshla
+      - email: dzmitry.dubrova@idt.net
+        githubUsername: dima-xd
+        ldapUid: ddubrova
+      - email: artsiom.osipau@idt.net
+        githubUsername: aosipovdev
+        ldapUid: aosipau
+
+    maintainers:
+      - email: aldo.balderrama@idt.net
+        githubUsername: mabalderramav
+        ldapUid: abalderrama
+      - email: vivian.valencia@idt.net
+        githubUsername: ViValencia
+        ldapUid: vvalencia
+      - email: aliaksei.yarmalchuk@idt.net
+        githubUsername: aliakseiyarmalchuk-ux
+        ldapUid: ayarmalchuk
+
+    developers:
+      - email: maksim.makaranka@idt.net
+        githubUsername: mmakarenko-idt
+        ldapUid: mmakaranka
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+      protected: false
+    uat:
+      envType: uat
+      accountId: 412304547329
+    prod:
+      envType: prod
+      accountId: 412304547329
+      vaultSupport: true

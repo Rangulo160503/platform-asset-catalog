@@ -1,0 +1,153 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: dtc-tmt
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    ##
+    ## lob: tech_dev_mt_retail
+    lob: tech_dev_dtc
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: tmt
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: dtc-tmt
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: NEST
+
+    ## id of github team, starts with "coretech"
+    ## (Optional)
+    githubTeamId: coretech/team_tmt
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team_tmt
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: tmt@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - vitaly.zhuravkov@idt.net
+      ## (Required)
+    productOwners:
+      - vitaly.shidlovskiy@idt.net
+      ## List of Technical Experts
+      ## (Required)
+    technicalExperts:
+      - evgeny.petrushevsky@idt.net
+      - daryll.fourie@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: dzmitry.martavoi@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: martavoi
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: dmartavoi
+      - email: valery.leontyev@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: valery-leontyev-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: vleontyev
+      - email: vitaly.zhuravkov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: vitaly-zhuravkov
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: vzhuravkov
+      - email: daryll.fourie@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: fouriedr-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: dfourie
+      - email: evgeny.petrushevsky@idt.net
+        githubUsername: epetrushevsky
+        ldapUid: epetrushevsky
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: alberto.cucchiani@idt.net
+        githubUsername: weregoat
+        ldapUid: acucchiani
+      - email: bartlomiej.lipka@idt.net
+        githubUsername: bartlomiejlipka-idt
+        ldapUid: blipka
+      - email: pawel.jedrzejak@idt.net
+        githubUsername: pawel-jedrzejak
+        ldapUid: pjedrzejak
+      - email: aliaksandr.dzichenka@idt.net
+        githubUsername: aliaksandr-dzichenka
+        ldapUid: adzichenka
+      - email: maksim.kurnitski@idt.net
+        githubUsername: mkurnitski-idt
+        ldapUid: mkurnitski
+      - email: julia.tuvarjyieva@idt.net
+        githubUsername: juliaTuvarjyieva
+        ldapUid: jtuvarjyieva
+      - email: stanislav.badov@idt.net
+        githubUsername: stanislav-badov-idt
+        ldapUid: sbadov 
+      - email: tomas.khellstrom@idt.net
+        githubUsername: thktomska-idt
+        ldapUid: tkhellstrom
+      - email: tornike.gogberashvili@idt.net
+        githubUsername: tornike-gogberashvili-idt
+        ldapUid: tgogberashvili
+      - email: maksim.kishchanka@idt.net
+        githubUsername: MaxKishchankaIDT
+        ldapUid: mkishchanka
+      - email: natallia.silina@idt.net
+        githubUsername: natallia-silina-idt
+        ldapUid: nsilina
+      - email: andrei.shemetau@idt.net
+        githubUsername: ashemetau-idt
+        ldapUid: anshemetau
+      - email: Otari.Gvazava@idt.net
+        githubUsername: oto-gvazava-idt
+        ldapUid: ogvazava
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~

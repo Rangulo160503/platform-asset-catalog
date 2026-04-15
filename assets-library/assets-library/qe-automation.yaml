@@ -1,0 +1,254 @@
+asset:
+  name: qe-automation
+  globalMetadata:
+    lob: tech_dev_br_general
+    scrumTeam: QA
+    applicationGroup: qe-automation
+  metadata:
+    jiraProjectId: ~
+    githubTeamId: coretech/qe-administrators
+    teamSlackChannel: guild-automation
+    resourceOwner: stanislav.badov@idt.net
+  owners:
+    stakeholders:
+      - stanislav.badov@idt.net
+      - karime.salomon@idt.net
+      - olga.kudina@idt.net
+    productOwners:
+      - stanislav.badov@idt.net
+      - karime.salomon@idt.net
+      - olga.kudina@idt.net
+    technicalExperts:
+      - eytan.faverman@idt.net
+      - alexey.chudnikov@idt.net
+
+  users:
+    admins:
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: stanislav.badov@idt.net
+        githubUsername: stanislav-badov-idt
+        ldapUid: sbadov
+      - email: karime.salomon@idt.net
+        githubUsername: KarimeSZ
+        ldapUid: ksalomon
+      - email: walter.mercado@idt.net
+        githubUsername: iRetlaWM
+        ldapUid: wmercado
+      - email: aldo.balderrama@idt.net
+        githubUsername: mabalderramav
+        ldapUid: abalderrama
+      - email: raul.cabero@idt.net
+        githubUsername: rcaberoidt
+        ldapUid: rcabero
+      - email: olga.kudina@idt.net
+        githubUsername: kudzina
+        ldapUid: okudina
+      - email: virginia.sanabria@idt.net
+        githubUsername: virginiaSanabria
+        ldapUid: vsanabria
+      - email: juan.aitken@idt.net
+        githubUsername: jpaitkeng
+        ldapUid: jaitken
+      - email: diego.mendizabal@idt.net
+        githubUsername: diegoMendizabal30
+        ldapUid: dmendizabal
+      - email: franco.aldunate@idt.net
+        githubUsername: franco-aldunate-idt
+        ldapUid: faldunate
+      - email: vladislav.dobritski@idt.net
+        githubUsername: vladislav-dobritski-idt
+        ldapUid: vdobritski
+      - email: anna.olekhnik@idt.net
+        githubUsername: AnnaOlekhnikIDT
+        ldapUid: aolekhnik
+      - email: anton.serhiyenka@idt.net
+        githubUsername: aserhiyenka
+        ldapUid: aserhiyenka
+      - email: evgeni.trukhan@idt.net
+        githubUsername: YauheniTrukhanIDT
+        ldapUid: etrukhan
+      - email: nikolai.shimanskiy@idt.net
+        githubUsername: NikolaiShimanskiyIDT
+        ldapUid: nshimanskiy
+      - email: ivan.ramanovich@idt.net
+        githubUsername: ivan-ramanovich
+        ldapUid: iramanovich
+      - email: noelia.florero@idt.net
+        githubUsername: NoeliaFlorero
+        ldapUid: nflorero
+      - email: eugene.ahramenko@idt.net
+        githubUsername: eahramenko
+        ldapUid: eahramenko
+      - email: lourdes.villca@idt.net
+        githubUsername: LourdesVillca01
+        ldapUid: lvillca
+      - email: marcos.lara@idt.net
+        githubUsername: marcos-lara-idt
+        ldapUid: mlara
+      - email: vlad.buinevich@idt.net
+        githubUsername: VladBuinevichIDT
+        ldapUid: vbuinevich
+      - email: artsiom.yankouski@idt.net
+        githubUsername: artsiomyankouski
+        ldapUid: ayankouski
+      - email: elena.sidina@idt.net
+        githubUsername: ElenaSidina
+        ldapUid: esidina
+      - email: aidar.iakupov@idt.net
+        githubUsername: aidariakupov
+        ldapUid: aiakupov
+      - email: dziana.artsiomenka@idt.net
+        githubUsername: artdiana
+        ldapUid: dartsiomenka
+      - email: evgeny.petrushevsky@idt.net
+        githubUsername: epetrushevsky
+        ldapUid: epetrushevsky
+      - email: pavel.asushchanka@idt.net
+        githubUsername: PavelOsushchenko
+        ldapUid: pasushchanka
+      - email: igor.poznyak@idt.net
+        githubUsername: ivpoznyak
+        ldapUid: ipoznyak
+      - email: natallia.klemiata@idt.net
+        githubUsername: nklemiata-idt
+        ldapUid: nklemiata
+      - email: tatyana.benkovskaya@idt.net
+        githubUsername: tatyana-benk1204
+        ldapUid: tbenkovskaya
+      - email: valery.kirichenko@idt.net
+        githubUsername: kirychenkav
+        ldapUid: vkirichenko
+      - email: vladislav.stasevich@idt.net
+        githubUsername: vladislav-stasevich-idt
+        ldapUid: vstasevich
+      - email: valentin.kudzin@idt.net
+        githubUsername: valentin-kudzin
+        ldapUid: vkudzin
+      - email: julia.tuvarjyieva@idt.net
+        githubUsername: juliaTuvarjyieva
+        ldapUid: jtuvarjyieva
+      - email: yahor.staravoitau@idt.net
+        githubUsername: yahor-staravoitau-idt
+        ldapUid: ystaravoitau
+      - email: emma.brilo@idt.net
+        githubUsername: emmabrilo
+        ldapUid: ebrilo
+      - email: dzmitry.stelmashok@idt.net
+        githubUsername: DmitryStelmashok
+        ldapUid: dstelmashok  
+      - email: aliaksandr.shynkevich@idt.net
+        githubUsername: aliaksandr-shynkevich
+        ldapUid: ashynkevich
+      - email: maryia.mashkovich@idt.net
+        githubUsername: MaryiaMashkovichIDT
+        ldapUid: mmashkovich
+      - email: andrei.saroka@idt.net
+        githubUsername: anrei-saroka-idt
+        ldapUid: asaroka
+      - email: vlad.ratina@idt.net
+        githubUsername: vladislav-ratina-idt
+        ldapUid: vratina
+      - email: anastasiya.tarasevich@idt.net
+        githubUsername: AnastasiyaTarasevich-333
+        ldapUid: atarasevich
+      - email: furkan.celebi@idt.net
+        githubUsername: furkan-celebi
+        ldapUid: fcelebi
+      - email: nikita.demidenko@idt.net
+        githubUsername: ndemidenko
+        ldapUid: ndemidenko
+      - email: roman.barantsevich@idt.net 
+        githubUsername: rbarantsevich
+        ldapUid: rbarantsevich
+      - email: igor.tatarnikov@idt.net
+        githubUsername: igor-tatarnikov-idt
+        ldapUid: itatarnikau
+      - email: andrei.saroka@idt.net
+        githubUsername: adrei-saroka-idt
+        ldapUid: asaroka
+      - email: hanna.sukhadolava@idt.net
+        githubUsername: hanna-sukhadolava-idt
+        ldapUid: hsukhadolava
+      - email: darya.barkova@idt.net
+        githubUsername: dariabarkova
+        ldapUid: dbarkova
+      - email: alexey.bondarovitch@idt.net
+        githubUsername: alexey-bondarovitch-idt
+        ldapUid: abondarovitch
+      - email: raman.katuzhanets@idt.net
+        github: raman-katuzhanets-idt
+        ldapUid: rkatuzhanets
+      - email: benjamin.izquierdo@idt.net
+        githubUsername: BenjaminIzquierdo-RCH
+        ldapUid: jbizquierdo
+      - email: daria.alexeeva@idt.net
+        githubUsername: alexeevaDariaIDT
+        ldapUid: dalexeev
+      - email: aliaksandar.parfianovich@idt.net
+        githubUsername: aliaksandar-parfianovich-idt
+        ldapUid: aparfianovich
+      - email: volha.maskalenka@idt.net
+        githubUsername: volha-maskalenka-idt
+        ldapUid: vmaskalenka  
+    maintainers:
+      - email: viviana.guarety@idt.net
+        githubUsername: vguarety
+        ldapUid: vguarety
+      - email: vivian.valencia@idt.net
+        githubUsername: ViValencia
+        ldapUid: vvalencia
+      - email: gaston.perez@idt.net
+        githubUsername: GastonPerezR
+        ldapUid: gperez
+      - email: vladislav.dobritski@idt.net
+        githubUsername: vladislav-dobritski-idt
+        ldapUid: vdobritski
+      - email: halil.isvarlar@idt.net
+        githubUsername: halilisvarlar
+        ldapUid: hisvarlar
+      - email: pavel.kuzmin@idt.net
+        githubUsername: PavelKuzminIDT
+        ldapUid: pkuzmin
+      - email: kseniya.tsalabayeva@idt.net
+        githubUsername: KsenTsel
+        ldapUid: ktsalabayeva
+      - email: olga.dzmitranitsa@idt.net
+        githubUsername: olgadzmitranitsa
+        ldapUid: odzmitranitsa
+      - email: bartlomiej.lipka@idt.net
+        githubUsername: bartlomiejlipka-idt
+        ldapUid: blipka
+      - email: pawel.jedrzejak@idt.net
+        githubUsername: pawel-jedrzejak
+        ldapUid: pjedrzejak
+      - email: aliaksandr.dzichenka@idt.net
+        githubUsername: aliaksandr-dzichenka
+        ldapUid: adzichenka
+      - email: patricia.zavaleta@idt.net
+        githubUsername: Pzavaleta19
+        ldapUid: pzavaleta
+      - email: veranika.bayeva@idt.net
+        githubUsername: veranika-bayeva
+        ldapUid: vbayeva
+      - email: sergei.kolos@idt.net
+        githubUsername: sergeikolos-idt
+        ldapUid: skolos
+      - email: aliaksei.skliutau@idt.net
+        githubUsername: aliaksei-skliutau-idt
+        ldapUid: askliutau
+        
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+    qa:
+      envType: qa
+      accountId: 470427355418
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true

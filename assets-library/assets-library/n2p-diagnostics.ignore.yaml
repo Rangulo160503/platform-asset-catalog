@@ -1,0 +1,119 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: n2p-diagnostics
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: n2p_tech_n2p_office
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: n2p
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: n2p
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: n2p-g-ci-cd
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: denis.kolpakov@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - denis.kolpakov@idt.net
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - denis.kolpakov@idt.net
+      - arunim.devroy@idt.net
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - denis.kolpakov@idt.net
+      - darya.shestakova@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: denis.kolpakov@idt.net
+        githubUsername: k0lpak
+        ldapUid: dkolpakov
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers: ~
+    
+    
+    ## List of Asset Developers. Each memeber will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: 
+      - email: darya.shestakova@idt.net
+        githubUsername: DaryaShestakova
+        ldapUid: dshestakova
+
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    dev-videoconference:
+      envType: dev
+      protected: false
+      accountId: 542258342574
+      vpcName: videoconference
+    dev:
+      envType: dev
+      protected: false
+      accountId: 542258342574
+    qa:
+      envType: qa
+      protected: false
+      accountId: 542258342574
+    qa-videoconference:
+      envType: qa
+      protected: false
+      accountId: 542258342574
+      vpcName: videoconference
+    prod-videoconference:
+      envType: prod
+      protected: false
+      accountId: 577533758790
+      vpcName: videoconference
+    prod:
+      envType: prod
+      protected: false
+      accountId: 577533758790
+    uat:
+      envType: uat
+      protected: false
+      accountId: 577533758790
+    uat-videoconference:
+      envType: uat
+      protected: false
+      accountId: 577533758790
+      vpcName: videoconference

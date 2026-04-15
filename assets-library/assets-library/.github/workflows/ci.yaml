@@ -1,0 +1,17 @@
+---
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  linter:
+    runs-on: gha-runner-scale-set
+    steps:
+    - uses: actions/checkout@v1
+    - name: yaml-lint
+      uses: ibiqlik/action-yamllint@v1
+      with:
+        config_file: ".github/ymllint.yml"

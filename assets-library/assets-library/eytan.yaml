@@ -1,0 +1,89 @@
+# test
+asset:
+  name: eytan
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devtools
+    applicationGroup: eytan
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: eytan.faverman@idt.net
+
+  owners:
+    stakeholders:
+      - eytan.faverman@idt.net
+    productOwners:
+      - eytan.faverman@idt.net
+    technicalExperts:
+      - eytan.faverman@idt.net
+
+  users:
+    admins:
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: yulyan.glonti-TEST@idt.net
+        githubUsername: yglontiiiiiiiii
+        ldapUid: yglonti
+
+    maintainers: 
+      - email: idt-jenkins+testuser2@idt.net
+        githubUsername: IDT-JENKINS
+        ldapUid: devops_test_2
+      - email: Roman.Vaskevich@idt.net
+        githubUsername: RamanVaskevich1984
+        ldapUid: rvaskevich
+
+    developers:
+      - email: Roman.Vaskevich@idt.net
+        githubUsername: RamanVaskevich1984
+        ldapUid: rvaskevich
+      - email: idt-jenkins+testuser2@idt.net
+        githubUsername: IDT-JENKINS
+        ldapUid: devops_test_2
+
+  environments:
+#     sand:
+#       envType: lab
+#       accountId: 312226949769
+#       protected: false
+#       vpcName: generic
+    dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+#     dev1:
+#       envType: dev
+#       accountId: 833915412828
+#       vaultSupport: true
+#     dev-pro:
+#       envType: dev
+#       accountId: 833915412828
+    qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    idt_prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+      vaultSupport: true
+      allowApplyInParallelWithOtherEnvironments: false
+    nct_prod:
+      envType: prod
+      accountId: 344924705456
+      vaultSupport: true
+      allowApplyInParallelWithOtherEnvironments: false
+    nct_dev:
+      envType: qa
+      accountId: 958845839241
+      vaultSupport: true
+      allowApplyInParallelWithOtherEnvironments: false
+#    uat:
+#      envType: uat
+#      accountId: 412304547329
+#      vaultSupport: true

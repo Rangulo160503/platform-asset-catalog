@@ -1,0 +1,52 @@
+asset:
+  name: svp-a2g-zoho
+
+  globalMetadata:
+    lob: tech_dev_stored_value
+    scrumTeam: svp
+    applicationGroup: svp-a2g-zoho
+
+  metadata:
+    jiraProjectId: svp
+    githubTeamId: coretech/boss-svp
+    teamSlackChannel: team_svp
+    resourceOwner: svpdevqa@idt.net
+
+  owners:
+    stakeholders:
+      - esti.witty@idt.net
+    productOwners:
+      - yury.rakomsin@idt.net
+    technicalExperts:
+      - artsiom.peravoznikau@idt.net
+
+  users:
+    admins:
+      - email: paul.mihailov@idt.net
+        githubUsername: TristanMaximus
+        ldapUid: pmihailov
+      - email: artiom.borisevich@idt.net
+        githubUsername: artsiomborisevich
+        ldapUid: arborisevich
+      - email: ivan.logvinov@idt.net
+        githubUsername: LogvinovIvanIDT
+        ldapUid: ilogvinov
+      - email: aliaksandr.miron@idt.net
+        githubUsername: amiron-idt
+        ldapUid: amiron
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+    qa:
+      envType: qa
+      accountId: 470427355418
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true

@@ -1,0 +1,142 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: security-framework
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_security_framework
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: team_coreservices
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: security-framework
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: CORES
+    ## id of github team, starts with @coretech
+    ## (Optional)
+    githubTeamId: coretech/boss-core-services
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team_coreservices
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: alexey.chudnikov@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      ## Retailer Portal
+      - emilio.delrio@idt.net
+      ## Call Center Apps (Custcare, CMS, ASCERT, etc.)
+      - keith.mendelson@idt.net
+      ## Carrier Apps
+      - anthony.davidson@idt.net
+
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - domenico.riggi@idt.net
+
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - vitali.tomashevich@idt.net
+      - ilya.shibut@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      - email: domenico.riggi@idt.net
+        githubUsername: driggi
+        ldapUid: driggi
+      - email: alexey.chudnikov@idt.net
+        githubUsername: goodml
+        ldapUid: achudnikov
+      - email: vitali.tomashevich@idt.net
+        githubUsername: vtomashevich
+        ldapUid: vtomashevich
+      - email: artsiom.shabolda@idt.net
+        githubUsername: artsiom-shabolda
+        ldapUid: ashabolda
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      - email: ilya.shibut@idt.net
+        githubUsername: ShpikOne
+        ldapUid: ishibut
+      - email: aliaksandr.valdaitsau@idt.net
+        githubUsername: aliaksandr-valdaitsau-idt
+        ldapUid: avaldaitsau
+      - email: evgeni.trukhan@idt.net
+        githubUsername: YauheniTrukhanIDT
+        ldapUid: etrukhan
+      - email: virginia.sanabria@idt.net
+        githubUsername: virginiaSanabria
+        ldapUid: vsanabria
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers:
+      - email: volha.maskalenka@idt.net
+        githubUsername: volha-maskalenka-idt
+        ldapUid: vmaskalenka
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    ## Environment name ([a-z0-9-]+)
+    ## (Required)
+    qa:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: qa
+      ## AWS account ID
+      ## (Required)
+      accountId: 470427355418
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      # protected: false
+      ## Name of the existing VPC
+      ## (Optional) Defaults "generic"
+      # vpcName: generic
+      ## Vault support for the environment
+      ## If it's set to True, Vault resources and IAM role will be created
+      ## (Optional) Defaults false
+      # vaultSupport: false
+      ## Allow applying to multiple environments/accounts in parallel.
+      ## If it's set to True, allow applying changes to that environment with others in the same run with parallel mode.
+      ## (Optional) Defaults `false` for `envType:prod`
+      # allowApplyInParallelWithOtherEnvironments: true
+    qa-arm:
+      envType: qa
+      accountId: 470427355418
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+    prod-arm:
+      envType: prod
+      accountId: 412304547329
+      protected: true

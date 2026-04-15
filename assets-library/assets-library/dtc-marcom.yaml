@@ -1,0 +1,74 @@
+asset:
+  name: dtc-marcom
+  globalMetadata:
+    lob: tech_dev_mt_dtc
+    scrumTeam: team_dtc_marcom
+    applicationGroup: dtc-marcom
+  metadata:
+    jiraProjectId: BMP
+    githubTeamId:
+    teamSlackChannel: team_dtc_marcom
+    resourceOwner: siarhei.naralenkau@idt.net
+  owners:
+    stakeholders:
+      - valeria.schutskaya@idt.net
+    productOwners:
+      - valeria.schutskaya@idt.net
+    technicalExperts:
+      - anton.levkovich@idt.net
+      - andrew.rybaltouski@idt.net
+      - andrey.devgut@idt.net
+      - siarhei.naralenkau@idt.net
+  users:
+    admins:
+      - email: andrew.rybaltouski@idt.net
+        githubUsername: andrew-rybaltouski
+        ldapUid: arybaltouski
+      - email: andrey.devgut@idt.net
+        githubUsername: andrey-devgut
+        ldapUid: adevgut
+      - email: anton.levkovich@idt.net
+        githubUsername: Sahabial
+        ldapUid: alevkovich
+      - email: siarhei.naralenkau@idt.net
+        githubUsername: siarhei-naralenkau
+        ldapUid: snaralenkau
+      - email: siarhei.muha@idt.net
+        githubUsername: siarheimuha
+        ldapUid: smuha
+      - email: dmitry.akunevich@idt.net
+        githubUsername: dakunevichIDT
+        ldapUid: dakunevich
+      - email: anton.glinski@idt.net
+        githubUsername: anton-glinski-idt
+        ldapUid: aglinski
+      - email: ihar.halubovich@idt.net
+        githubUsername: ihar-halubovich-idt
+        ldapUid: ihalubovich
+      - email: anton.tarasevich@idt.net
+        githubUsername: antarasevich
+        ldapUid: antarasevich
+    maintainers:
+      - email: anna.olekhnik@idt.net
+        githubUsername: AnnaOlekhnikIDT
+        ldapUid: aolekhnik
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+      vpcName: generic
+      vaultSupport: true
+    qa:
+      envType: qa
+      accountId: 470427355418
+      vpcName: generic
+      vaultSupport: true
+    prod:
+      envType: prod
+      accountId: 412304547329
+      vpcName: generic
+      vaultSupport: true

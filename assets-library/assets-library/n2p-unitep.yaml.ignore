@@ -1,0 +1,166 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: n2p-unitep
+  ## Is this asset related to global infrastructure level.
+  ## Whether the asset will be applied restrictive rules flow or not.
+  ## (Optional) Defaults false
+  infrastructure: false
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## Value here will be used for `tech:lob` tag on your resources
+    ## (Required)
+    lob: tech_dev_n2p_office
+
+    ## name of scrum team from the same document second sheet
+    ## Value here will be used for `tech:team_name` tag on your resources
+    ## (Required)
+    scrumTeam: n2p_uniteplatform
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## Value here will be used for `tech:applications_group` tag on your resources
+    ## (Required)
+    applicationGroup: n2p-unite
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## Value here will be used for `idt:jira_project_id` tag on your resources
+    ## (Optional)
+    jiraProjectId: UNITEP
+
+
+    ## id of github team, starts with "coretech"
+    ## Value here will be used for `idt:github_team_id` tag on your resources
+    ## (Optional)
+    githubTeamId: n2p-unite
+
+    ## Name of primary Slack channel
+    ## Value here will be used for `idt:team_slack_channel` tag on your resources
+    ## (Optional)
+    teamSlackChannel: n2p_uniteplatform
+
+    ## Primary responsible person for created resources
+    ## Value here will be used for `idt:resource_owner_email` tag on your resources
+    ## (Optional)
+    resourceOwner:
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - arunim.devroy@idt.net
+      - maksim.schurov@idt.net
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - yitzi.wurtzel@net2phone.com
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - aliaksandr.bialinski@idt.net
+      - dmitry.volodenkov@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: dmitry.volodenkov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: dimmy-timmy
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: dvolodenkov
+        ## Email address, ends with @idt.net
+        ##  (Required)
+      - email: aliaksandr.bialinski@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: abialinskiidt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: abialinski
+        ## Email address, ends with @idt.net
+        ##  (Required)
+      - email: anton.ivchenko@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: iavm-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: aivchenko
+      - email: sergei.valko@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: sergeivalkoidt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: svalko
+      - email: chana.koster@net2phone.com
+        githubUsername: ckoster
+        ldapUid: ckoster
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers: ~
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    ## Environment name ([a-z0-9-]+)
+    ## (Required)
+    dev:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: dev
+      ## AWS account ID
+      ## (Required)
+      accountId: 542258342574
+
+    ## Environment name ([a-z0-9-]+)
+    ## (Required)
+    qa:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: qa
+      ## AWS account ID
+      ## (Required)
+      accountId: 542258342574
+
+    uat:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: uat
+      ## AWS account ID
+      ## (Required)
+      accountId: 577533758790
+      vpcName: generic-v2
+
+    prod:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: prod
+      ## AWS account ID
+      ## (Required)
+      accountId: 577533758790
+      vpcName: generic-v2

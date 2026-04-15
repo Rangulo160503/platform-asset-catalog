@@ -1,0 +1,79 @@
+---
+asset:
+  name: mhryb
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devops
+    applicationGroup: devops-test
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: mikalai.hryb@idt.net
+
+  owners:
+    stakeholders:
+      - mikalai.hryb@idt.net
+    productOwners:
+      - mikalai.hryb@idt.net
+    technicalExperts:
+      - mikalai.hryb@idt.net
+
+  users:
+    admins:
+      - email: mikalai.hryb@idt.net
+        githubUsername: mikalai-hryb-idt
+        ldapUid: mhryb
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    sand:
+      envType: lab
+      accountId: 312226949769
+      protected: false
+      vaultSupport: false
+    dev:
+      envType: dev
+      accountId: 833915412828
+      protected: false
+      vaultSupport: false
+    dev-v:
+      envType: dev
+      accountId: 833915412828
+      protected: false
+      vaultSupport: true
+    dev-nct:
+      envType: dev
+      accountId: 958845839241
+      protected: false
+      vaultSupport: false
+    dev-nct-v:
+      envType: dev
+      accountId: 958845839241
+      protected: false
+      vaultSupport: true
+    dev-p-v:
+      envType: dev
+      accountId: 833915412828
+      protected: true
+      vaultSupport: true
+    qa:
+      envType: qa
+      accountId: 470427355418
+      protected: true
+      vaultSupport: false
+    qa-v:
+      envType: qa
+      accountId: 470427355418
+      protected: false
+      vaultSupport: true
+    prod-v:
+      envType: prod
+      accountId: 412304547329
+      protected: false
+      vaultSupport: true

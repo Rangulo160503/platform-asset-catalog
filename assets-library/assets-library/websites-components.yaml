@@ -1,0 +1,21 @@
+asset:
+  name: websites-components
+  gitRepository: https://github.com/coretech/websites-components-terra-live
+  lob: tech_dev_corp
+  scrumTeam: team_websites
+  applicationsGroup: websites-components
+  stakeholder: valery.leontyev@idt.net
+  productOwner: eva.kantor@idt.net
+  technicalExpert: eugene.rotar@idt.net
+  jiraProjectId: WS
+  githubTeamId: coretech/websites-team
+  teamSlackChannel: team_websites
+  resourceOwner: team-websites@idt.net
+  environments:
+    sandbox:
+      accountId: 312226949769
+    qa:
+      accountId: 470427355418
+    prod:
+      accountId: 412304547329
+      protected: true

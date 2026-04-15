@@ -1,0 +1,70 @@
+asset:
+  name: nct-voss
+
+  globalMetadata:
+    lob: tech_dev_cable_telephony
+    scrumTeam: cvoss
+    applicationGroup: ~
+
+  metadata:
+    jiraProjectId: cvoss
+    githubTeamId: ~
+    teamSlackChannel: mymso2_build
+    resourceOwner: willysoria.guzman@idt.net
+
+  owners:
+    stakeholders:
+      - arunim.devroy@idt.net
+    productOwners:
+      - natasha.stone@idt.net
+    technicalExperts:
+      - willysoria.guzman@idt.net
+
+  users:
+    admins:
+      - email: miriam.wohlgelernter@net2phone.com
+        githubUsername: MIRWOHL
+        ldapUid: miriamw
+      - email: Marcelo.Ancieta@idt.net
+        githubUsername: mancieta
+        ldapUid: mancieta
+      - email: Diego.Mendizabal@idt.net
+        githubUsername: dmendizabal
+        ldapUid: dmendizabal
+      - email: bill.shankle@net2phone.com
+        githubUsername: wjshankle
+        ldapUid: wshankle
+      - email: fidel.barcaya@idt.net
+        githubUsername: fbarcaya
+        ldapUid: fbarcaya
+      - email: eytan.faverman-test@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: carlos.uscamayta@net2phone.com
+        githubUsername: carlosuscamayta
+        ldapUid: cuscamayta
+      - email: adam.sherman@idt.net
+        githubUsername: crbn60
+        ldapUid: asherman
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    dev:
+      envType: qa
+      accountId: 958845839241
+    qa:
+      envType: qa
+      accountId: 958845839241
+    mhryb:
+      envType: qa
+      accountId: 958845839241
+    staging:
+      envType: qa
+      accountId: 344924705456
+      protected: false
+    prod:
+      envType: prod
+      accountId: 344924705456
+      protected: true

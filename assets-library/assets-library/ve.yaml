@@ -1,0 +1,109 @@
+asset:
+  ## This should be a temporal asset since our apps curently are looking to tech_dev_br_general/admcsa path.
+  ## But for ADMI team we should store our secrets in other folder
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: ve
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_infra_telecom
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: team_ve
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: ve
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId:
+
+    ## id of github team, starts with "coretech"
+    ## (Optional)
+    githubTeamId: coretech/ve-infra
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: ve-infra_team,
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: engineering@idt.net
+
+  ## Business owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - francisco.davila@idt.net
+      - engineering@idt.net
+      ## (Required)
+    productOwners:
+      - richard.lee@idt.net
+      - cesar.cocaro@idt.net
+      ## List of Technical Experts
+      ## (Required)
+    technicalExperts:
+      - thomas.musella@idt.net
+      - bayron.calderon@idt.net
+      - jorge.letran@idt.net
+      - francisco.davila@idt.net
+      - francis.matera@idt.net
+      - richard.lee@idt.net
+      - cesar.cocaro@idt.net
+      ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+      ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: bayron.calderon@idt.net
+        githubUsername: bayroncalderon
+        ldapUid: bcalderon
+      - email: richard.lee@idt.net
+        githubUsername: rleeidtwork
+        ldapUid: rlee
+      - email: cesar.cocaro@idt.net
+        githubUsername: cesarcocaroidt
+        ldapUid: ccocaro
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      - email: bayron.calderon@idt.net
+        githubUsername: bayroncalderon
+        ldapUid: bcalderon
+      - email: richard.lee@idt.net
+        githubUsername: rleeidtwork
+        ldapUid: rlee
+      - email: cesar.cocaro@idt.net
+        githubUsername: cesarcocaroidt
+        ldapUid: ccocaro
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers:
+      - email: richard.lee@idt.net
+        githubUsername: rleeidtwork
+        ldapUid: rlee
+      - email: cesar.cocaro@idt.net
+        githubUsername: cesarcocaroidt
+        ldapUid: ccocaro

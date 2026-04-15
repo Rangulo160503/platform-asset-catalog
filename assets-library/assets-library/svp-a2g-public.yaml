@@ -1,0 +1,63 @@
+asset:
+  name: svp-a2g-public
+
+  globalMetadata:
+    lob: tech_dev_stored_value
+    scrumTeam: svp
+    applicationGroup: svp-a2g-public
+
+  metadata:
+    jiraProjectId: svp
+    githubTeamId: coretech/boss-svp
+    teamSlackChannel: team_svp
+    resourceOwner: svpdevqa@idt.net
+
+  owners:
+    stakeholders:
+      - esti.witty@idt.net
+    productOwners:
+      - yury.rakomsin@idt.net
+    technicalExperts:
+      - siarhei.naralenkau@idt.net
+
+  users:
+    admins:
+      - email: dzmitry.dulko@idt.net
+        githubUsername: dzmitry-dulko
+        ldapUid: ddulko
+      - email: ivan.logvinov@idt.net
+        githubUsername: LogvinovIvanIDT
+        ldapUid: ilogvinov
+      - email: artiom.borisevich@idt.net
+        githubUsername: artsiomborisevich
+        ldapUid: arborisevich
+      - email: mustafa.husein@idt.net
+        githubUsername: mustafaMZH
+        ldapUid: mhusein
+      - email: dan.ivanov@idt.net
+        githubUsername: danivanovidt
+        ldapUid: divanov
+      - email: roman.bondarenko@idt.net
+        githubUsername: hollandets
+        ldapUid: rbondarenko
+      - email: artsiom.reutovich@idt.net
+        githubUsername: Artsiom-Reutovich
+        ldapUid: areutovich
+      - email: aliaksandr.miron@idt.net
+        githubUsername: amiron-idt
+        ldapUid: amiron
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 470427355418
+    qa:
+      envType: qa
+      accountId: 470427355418
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true

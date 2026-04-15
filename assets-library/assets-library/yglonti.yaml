@@ -1,0 +1,48 @@
+---
+asset:
+  name: yglonti
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devtools
+    applicationGroup: yglonti
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: yulyan.glonti@idt.net
+
+  owners:
+    stakeholders:
+      - yulyan.glonti@idt.net
+    productOwners:
+      - yulyan.glonti@idt.net
+    technicalExperts:
+      - yulyan.glonti@idt.net
+
+  users:
+    admins:
+      - email: alexey.chudnikov@idt.net
+        githubUsername: goodml
+        ldapUid: achudnikov
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: yulyan.glonti@idt.net
+        githubUsername: yglonti
+        ldapUid: yglonti
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true

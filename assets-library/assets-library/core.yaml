@@ -1,0 +1,216 @@
+---
+asset:
+    name: core
+    infrastructure: true
+
+    globalMetadata:
+        lob: tech_dev_infrastructure
+        scrumTeam: team_devtools
+        applicationGroup: core
+
+    metadata:
+        jiraProjectId: DEVOPS
+        githubTeamId: coretech/core-administrators
+        teamSlackChannel: team_devops
+        resourceOwner: devops@idt.net
+
+    owners:
+        stakeholders:
+            - alexey.chudnikov@idt.net
+        productOwners:
+            - alexey.chudnikov@idt.net
+        technicalExperts:
+            - eytan.faverman@idt.net
+
+    users:
+        admins:
+            - email: sai.giridhar@idt.net
+              githubUsername: saigiridhar
+              ldapUid: sgiridhar
+            - email: anton.kapustin@idt.net
+              githubUsername: AntonyKapustin
+              ldapUid: akapustin
+            - email: alexey.chudnikov@idt.net
+              githubUsername: goodml
+              ldapUid: achudnikov
+            - email: eytan.faverman@idt.net
+              githubUsername: efaverman
+              ldapUid: efaverman
+            - email: roman.vaskevich@idt.net
+              githubUsername: RamanVaskevich1984
+              ldapUid: rvaskevich
+            - email: yahor.fedasenka@idt.net
+              githubUsername: yahorf
+              ldapUid: yfedasenka
+            - email: albert.nieriz@idt.net
+              githubUsername: anieriz-idt
+              ldapUid: anieriz
+            - email: steven.quiros@idt.net
+              githubUsername: stevenquiros-idt
+              ldapUid: squiros
+            - email: yulyan.glonti@idt.net
+              githubUsername: yglonti
+              ldapUid: yglonti
+            - email: tsimafei.vavulau@idt.net
+              githubUsername: tsimafei-vavulau-idt
+              ldapUid: tvavulau
+            - email: nicolas.ruiz@idt.net
+              githubUsername: nruiz-idt
+              ldapUid: nruiz
+            - email: eduardo.mazzali@idt.net
+              githubUsername: EduardoIDTX
+              ldapUid: emazzali
+
+        maintainers:
+            - email: yahor.fedasenka@idt.net
+              githubUsername: yahorf
+              ldapUid: yfedasenka
+
+        developers:
+            - email: eytan.faverman-test@idt.net
+              githubUsername: efaverman
+              ldapUid: efaverman
+            - email: ruslan.dzemidovich@idt.net
+              githubUsername: ruslan-dzemidovich-idt
+              ldapUid: rdzemidovich
+
+    environments:
+        core_services:
+            envType: prod
+            accountId: '416223954868'
+            protected: true
+            allowApplyInParallelWithOtherEnvironments: false
+        n2p_dev:
+            envType: dev
+            accountId: '542258342574'
+        n2p_db_dev:
+            envType: dev
+            accountId: '364621629698'
+        idt_dev:
+            envType: dev
+            accountId: '833915412828'
+        db_qa:
+            envType: qa
+            accountId: '411996058896'
+        idt_qa:
+            envType: qa
+            accountId: '470427355418'
+        enterprise_qa:
+            envType: qa
+            accountId: '605514805903'
+        express_qa:
+            envType: qa
+            accountId: '084687735204'
+        express_prod:
+            envType: prod
+            accountId: '403851211463'
+    #    admcsa_qa:
+    #      envType: qa
+    #      accountId: 978298293034
+
+    #    voip_prod:
+    #      envType: prod
+    #      accountId: 102061527357
+    #      protected: true
+    #    liveninja_prod:
+    #      envType: prod
+    #      accountId: 106240356133
+    #      protected: true
+    #    call_center_prod:
+    #      envType: prod
+    #      accountId: 128442260064
+    #      protected: true
+    #    mitto_prod:
+    #      envType: prod
+    #      accountId: 190818666637
+    #      protected: true
+        idt_prod:
+            envType: prod
+            accountId: '412304547329'
+            protected: true
+            allowApplyInParallelWithOtherEnvironments: false
+    #    neth_prod:
+    #      envType: prod
+    #      accountId: 418064146542
+    #      protected: true
+    #    messaging_prod:
+    #      envType: prod
+    #      accountId: 550844826189
+    #      protected: true
+        db_prod:
+            envType: prod
+            accountId: '563384182047'
+            protected: true
+            allowApplyInParallelWithOtherEnvironments: false
+        n2p_prod:
+            envType: prod
+            accountId: '577533758790'
+            protected: true
+            allowApplyInParallelWithOtherEnvironments: false
+        n2p_db_prod:
+            envType: prod
+            accountId: '604217977023'
+            protected: true
+            allowApplyInParallelWithOtherEnvironments: false
+        enterprise_prod:
+            envType: prod
+            accountId: '960220825783'
+            protected: true
+            allowApplyInParallelWithOtherEnvironments: false
+        messaging_test:
+            envType: dev
+            accountId: '477639076797'
+            protected: false
+            allowApplyInParallelWithOtherEnvironments: true
+#    retail_prod:
+#      envType: prod
+#      accountId: 685464929183
+#      protected: true
+#    pci_prod:
+#      envType: prod
+#      accountId: 718994774397
+#      protected: true
+#    beyond_prod:
+#      envType: prod
+#      accountId: 856842346174
+#      protected: true
+#    bi_prod:
+#      envType: prod
+#      accountId: 925369632211
+#      protected: true
+        n2p_pci_prod:
+            envType: prod
+            accountId: '934804201905'
+            protected: true
+            allowApplyInParallelWithOtherEnvironments: false
+        idt_qa2:
+            envType: qa
+            accountId: '470427355418'
+            vpc_name: DEVOPS-3538
+        crp_qa:
+            envType: qa
+            accountId: '059370180893'
+        nct_dev:
+            envType: dev
+            accountId: '958845839241'
+        nct_prod:
+            envType: prod
+            accountId: '344924705456'
+        nrs_dev2:
+            envType: dev
+            accountId: '011097624144'
+        nrs2_prod:
+            envType: prod
+            accountId: '374878872111'
+        devops_test:
+            envType: dev
+            accountId: '445309495976'
+        n2p_ca_prod:
+            envType: prod
+            accountId: '685645913471'
+        car_tools_qa:
+            envType: qa
+            accountId: '770547774792'
+        car_tools_prod:
+            envType: prod
+            accountId: '805198863187'

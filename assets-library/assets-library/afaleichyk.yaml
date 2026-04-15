@@ -1,0 +1,40 @@
+---
+asset:
+  name: afaleichyk
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devops
+    applicationGroup: devops-test
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: andrei.faleichyk@idt.net
+
+  owners:
+    stakeholders:
+      - andrei.faleichyk@idt.net
+    productOwners:
+      - andrei.faleichyk@idt.net
+    technicalExperts:
+      - andrei.faleichyk@idt.net
+
+  users:
+    admins:
+      - email: andrei.faleichyk@idt.net
+        githubUsername: afaleichyk
+        ldapUid: afaleichyk
+
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+      protected: false
+      vaultSupport: false

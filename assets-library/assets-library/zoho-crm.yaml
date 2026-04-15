@@ -1,0 +1,145 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: zoho-crm
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_br_general
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: zoho-crm
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: zoho-crm
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: RCFST
+
+    ## id of github team, starts with "coretech"
+    ## (Optional)
+    githubTeamId: coretech/zoho-crm
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team_zoho_crm
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: team-zoho-crm@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - oussama.elhaddad@idt.net
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - rene.selemi@idt.net
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - maxim.kislytsyn@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: oussama.elhaddad@idt.net
+        githubUsername: oelhaddad
+        ldapUid: oelhaddad
+      - email: kiryl.shcherba@idt.net
+        githubUsername: kiryl-shcherba-idt
+        ldapUid: kshcherba
+      - email: anton.tarasevich@idt.net
+        githubUsername: antarasevich
+        ldapUid: antarasevich
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers: ~
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers:
+      - email: yaswell.delarosa@idt.net
+        githubUsername: Yaswell-DelaRosa
+        ldapUid: ydelarosa
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    ## Environment name ([a-z0-9-]+)
+    ## (Required)
+    dev:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: dev
+      ## AWS account ID
+      ## (Required)
+      accountId: 470427355418
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic
+      ## Vault support for the environment
+      ## If it's set to True, Vault resources and IAM role will be created
+      ## (Optional) Defaults false
+      vaultSupport: true
+    qa:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: qa
+      ## AWS account ID
+      ## (Required)
+      accountId: 470427355418
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic
+      ## Vault support for the environment
+      ## If it's set to True, Vault resources and IAM role will be created
+      ## (Optional) Defaults false
+      vaultSupport: true
+    prod:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: prod
+      ## AWS account ID
+      ## (Required)
+      accountId: 412304547329
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: true
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic
+      ## Vault support for the environment
+      ## If it's set to True, Vault resources and IAM role will be created
+      ## (Optional) Defaults false
+      vaultSupport: true

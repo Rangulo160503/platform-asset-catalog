@@ -1,0 +1,52 @@
+# marked for decommission
+---
+asset:
+    name: glerma
+
+    globalMetadata:
+        lob: tech_dev_infrastructure
+        scrumTeam: team_devops
+        applicationGroup: team_glerma
+
+    metadata:
+        jiraProjectId: DEVOPS
+        githubTeamId: coretech/core-administrators
+        teamSlackChannel: team_devops
+        resourceOwner: george.lerma@idt.net
+
+    owners:
+        stakeholders:
+            - george.lerma@idt.net
+        productOwners:
+            - george.lerma@idt.net
+        technicalExperts:
+            - george.lerma@idt.net
+
+    users:
+        admins:
+            - email: george.lerma@idt.net
+              githubUsername: efaverman
+              ldapUid: glerma
+
+    maintainers:
+
+    developers:
+
+    environments:
+        sand:
+            envType: lab
+            accountId: 312226949769
+            protected: false
+            vpcName: generic
+        dev:
+            envType: dev
+            accountId: 833915412828
+        qa:
+            envType: qa
+            accountId: 470427355418
+        nct_dev:
+            envType: dev
+            accountId: 958845839241
+        nct_prod:
+            envType: prod
+            accountId: 344924705456

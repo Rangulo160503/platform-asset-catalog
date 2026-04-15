@@ -1,0 +1,85 @@
+asset:
+  name: nst-resources
+
+  globalMetadata:
+    lob: tech_dev_n2p_office
+    scrumTeam: n2p_uniteplatform
+    applicationGroup: nst
+
+  metadata:
+    jiraProjectId: N2PSIPT
+    githubTeamId: coretech/n2p-nst
+    teamSlackChannel: n2p_sip_trunking
+    resourceOwner: maksim.schurov@idt.net
+
+  owners:
+    stakeholders:
+      - zali.ritholtz@idt.net
+    productOwners:
+      - jeffrey.skelton@idt.net
+    technicalExperts:
+      - maksim.schurov@idt.net
+
+  users:
+    admins:
+      - email: maksim.schurov@idt.net
+        githubUsername: mschurov
+        ldapUid: mschurov
+
+      - email: pavel.hrynchanka@idt.net
+        githubUsername: phrynchanka
+        ldapUid: phrynchanka
+
+      - email: pavel.sokolow@idt.net
+        githubUsername: pasokolow
+        ldapUid: psokolow
+
+      - email: vladyslav.korniiaka@idt.net
+        githubUsername: vlad-korniiaka-idt
+        ldapUid: vkorniiaka
+
+      - email: akash.gupta@idt.net
+        githubUsername: akashidt
+        ldapUid: agupta
+
+      - email: dmitry.volodenkov@idt.net
+        githubUsername: dimmy-timmy
+        ldapUid: dvolodenkov
+
+      - email: richard.beckman@idt.net
+        githubUsername: rbeckman
+        ldapUid: n2p_app_support
+
+      - email: roman.bondarenko@idt.net
+        githubUsername: hollandets
+        ldapUid: rbondarenko
+
+      - email: alexander.glovko@idt.net
+        githubUsername: sunnypoint
+        ldapUid: aglovko
+
+      - email: santpal.goel@idt.net
+        githubUsername: santpalgoel
+        ldapUid: sgoel
+
+      - email: aliaksei.skadorva@idt.net
+        githubUsername: askadorva
+        ldapUid: askadorva
+
+      - email: darya.bortnik@idt.net
+        githubUsername: d-bortnik
+        ldapUid: dbortnik
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    prod:
+      envType: prod
+      accountId: 577533758790
+      vpcName: calling-server
+    uat:
+      envType: uat
+      accountId: 577533758790
+      vpcName: calling-server

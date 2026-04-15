@@ -1,0 +1,56 @@
+# Marked for the decommission
+asset:
+  name: n2p-videoconference
+  globalMetadata:
+    lob: tech_dev_n2p_office
+    scrumTeam: n2p-videoconference
+    applicationGroup: n2p-videoconference
+  metadata:
+    jiraProjectId: N2PVID
+    githubTeamId: coretech/n2p-videoconference-dev
+    teamSlackChannel: n2p-videoconference-notif
+    resourceOwner: leonid.novikov@idt.net
+  owners:
+    stakeholders:
+      - scott.bleasdell@idt.net
+    productOwners:
+      - scott.bleasdell@idt.net
+    technicalExperts:
+      - leonid.novikov@idt.net
+      - alexey.tkachev@idt.net
+      - zhan.bazarov@idt.net
+      - eugene.zabolotskih@idt.net
+  users:
+    admins:
+      - email: leonid.novikov@idt.net
+        githubUsername: leonidius123
+        ldapUid: lnovikov
+      - email: alexey.tkachev@idt.net
+        githubUsername: Alex-Tkachev
+        ldapUid: atkachev
+      - email: zhan.bazarov@idt.net
+        githubUsername: zbazarov
+        ldapUid: zbazarov
+      - email: eugene.zabolotskih@idt.net
+        githubUsername: zhekaby
+        ldapUid: ezabolotskih
+    maintainers: ~
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      protected: false
+      accountId: 542258342574
+      vpcName: videoconference
+    qa:
+      envType: qa
+      protected: false
+      accountId: 542258342574
+      vpcName: videoconference
+      #### START OF PROD
+    prod:
+      envType: prod
+      protected: false
+      accountId: 577533758790
+      vpcName: videoconference

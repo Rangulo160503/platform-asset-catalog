@@ -1,0 +1,225 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: boss-ail
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    ##
+    ## lob: tech_dev_mt_retail
+    lob: tech_dev_money_remittance
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: ail
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: boss-ail
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: AL
+
+    ## id of github team, starts with "coretech"
+    ## (Optional)
+    githubTeamId: coretech/team-ail
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team-ail
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: team-ail@idt.net
+
+  ## Business owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - mark.moorman@idt.net
+      ## (Required)
+    productOwners:
+      - mark.moorman@idt.net
+      ## List of Technical Experts
+      ## (Required)
+    technicalExperts:
+      - german.chukhrai@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: valery.leontyev@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: valery-leontyev-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: vleontyev
+      - email: stanislav.badov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: stanislav-badov-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: sbadov
+      - email: german.chukhrai@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: gchukhrai
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: gchukhrai
+      - email: eino.lilius@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: elilius
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: elilius
+      - email: mark.moorman@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: idtmwm
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: mmoorman
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: donald.koch@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: don-koch-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: dkoch
+      - email: ghazaros.barseghyan@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: ghbarseghyanidt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: gbarseghyan
+      - email: elina.allakhverdova@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: eallakhverdova
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: eallakhverdova
+      - email: aidar.iakupov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: aidariakupov
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: aiakupov
+      - email: anton.chertovich@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: anton-chertovich-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: achertovich
+      - email: oleg.goncharov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: oleg-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: ogoncharov
+      - email: salome.urotadze@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: salome-urotadze-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: surotadze
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    dev:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: dev
+      ## AWS account ID
+      ## (Required)
+      accountId: 833915412828
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic
+
+    qa:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: qa
+      ## AWS account ID
+      ## (Required)
+      accountId: 470427355418
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic
+
+    uat:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: uat
+      ## AWS account ID
+      ## (Required)
+      accountId: 412304547329
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic
+
+    prod:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: prod
+      ## AWS account ID
+      ## (Required)
+      accountId: 412304547329
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic

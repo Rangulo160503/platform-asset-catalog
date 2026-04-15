@@ -1,0 +1,84 @@
+asset:
+  # Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: ibandarenka
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_n2p_office
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: team_n2p_devops
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: ibandarenka
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId:
+
+    ## id of github team, starts with @coretech
+    ## (Optional)
+    githubTeamId:
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel:
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: ihar.bandarenka@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    stakeholders:
+      - ihar.bandarenka@idt.net
+    productOwners:
+      - ihar.bandarenka@idt.net
+    technicalExperts:
+      - ihar.bandarenka@idt.net
+
+      ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+      ## (Required)
+  users:
+    ## List of Asset Administrators. Each memeber will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      - email: ihar.bandarenka@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: ihar-bandarenka-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: ibandarenka
+
+    ## List of Asset Maintainers. Each memeber will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers: ~
+
+    ## List of Asset Developers. Each memeber will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    n2p-dev:
+      envType: dev
+      accountId: 542258342574
+      vpcName: calling-server

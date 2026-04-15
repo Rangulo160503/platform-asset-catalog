@@ -1,0 +1,144 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: n2p-webhooks
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_n2p_office
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: n2p-webhooks
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: n2p-webhooks
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: N2PCA
+
+    ## id of github team, starts with "coretech"
+    ## (Optional)
+    githubTeamId: coretech/n2p-team-services
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: https://idt.slack.com/archives/C02FCRWMWJU
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner:
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - arunim.devroy@idt.net
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - shimon.detwiler@net2phone.com
+      - yitzi.wurtzel@net2phone.com
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - arunim.devroy@idt.net
+      - denis.kolpakov@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    ## Each defined user should have same configuration
+    ## (Required email, githubUsername, ldapUid)
+    admins:
+      
+      - email: arunim.devroy@idt.net
+        githubUsername: adevroy
+        ldapUid: adevroy
+        
+      - email: denis.kolpakov@idt.net
+        githubUsername: k0lpak
+        ldapUid: dkolpakov
+      
+      - email: konstantin.smolyakov@idt.net
+        githubUsername: konstantin-smolyakov-idt
+        ldapUid: ksmolyakov
+      
+      - email: madhu.polisetti@idt.net
+        githubUsername: madhupolisetti
+        ldapUid: mpolisetti
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+
+      - email: chrystian.santos@net2phone.ca
+        githubUsername: csantos17
+        ldapUid: csantos
+
+      - email: suzy.nakayama@net2phone.ca
+        githubUsername: SuzyNakayama1
+        ldapUid: snakayama
+
+      - email: alexey.konovalov@idt.net
+        githubUsername: Alexey-Konovalov
+        ldapUid: akonovalov
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    ## Environment name ([a-z0-9-]+)
+    ## (Required)
+    dev:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: dev
+      ## AWS account ID
+      ## (Required)
+      accountId: 542258342574
+      
+    ## Environment name ([a-z0-9-]+)
+    ## (Required)
+    qa:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: qa
+      ## AWS account ID
+      ## (Required)
+      accountId: 542258342574
+
+    uat:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: uat
+      ## AWS account ID
+      ## (Required)
+      accountId: 577533758790
+
+    prod:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: prod
+      ## AWS account ID
+      ## (Required)
+      accountId: 577533758790

@@ -1,0 +1,121 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: n2p-ai
+  
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## Value here will be used for `tech:lob` tag on your resources
+    ## (Required)
+    lob: tech_dev_n2p_office
+
+    ## name of scrum team from the same document second sheet
+    ## Value here will be used for `tech:team_name` tag on your resources
+    ## (Required)
+    scrumTeam: team_n2p_ai
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## Value here will be used for `tech:applications_group` tag on your resources
+    ## (Required)
+    applicationGroup: n2p-ai
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## Value here will be used for `idt:jira_project_id` tag on your resources
+    ## (Optional)
+    jiraProjectId: N2PAI
+
+
+    ## id of github team, starts with "coretech"
+    ## Value here will be used for `idt:github_team_id` tag on your resources
+    ## (Optional)
+    githubTeamId: n2p-ai-developers
+
+    ## Name of primary Slack channel
+    ## Value here will be used for `idt:team_slack_channel` tag on your resources
+    ## (Optional)
+    teamSlackChannel: n2p-ai
+
+    ## Primary responsible person for created resources
+    ## Value here will be used for `idt:resource_owner_email` tag on your resources
+    ## (Optional)
+    resourceOwner:
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - arunim.devroy@idt.net
+      - daniel.leubitz@net2phone.com
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - daniel.leubitz@net2phone.com
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - nathaniel.ritholtz@idt.net
+      - stephen.gulics@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: nathaniel.ritholtz@idt.net
+        githubUsername: nritholtz
+        ldapUid: nritholtz
+      - email: stephen.gulics@idt.net
+        githubUsername: sgulics
+        ldapUid: sgulics
+      - email: tali.yovine@net2phone.com
+        githubUsername: tyovine
+        ldapUid: tyovine
+      - email: jorge.araya@net2phone.com
+        githubUsername: shackra
+        ldapUid: jaraya
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers: ~
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    ## Environment name ([a-z0-9-]+)
+    ## (Required)
+    qa:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: qa
+      ## AWS account ID
+      ## (Required)
+      accountId: 542258342574
+
+    prod:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: prod
+      ## AWS account ID
+      ## (Required)
+      accountId: 577533758790
+      vpcName: generic-v2

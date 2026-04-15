@@ -1,0 +1,54 @@
+# Marked for decommission
+asset:
+  name: playground
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devops
+    applicationGroup: playground
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: devops@idt.net
+
+  owners:
+    stakeholders:
+      - alexey.chudnikov@idt.net
+    productOwners:
+      - alexey.chudnikov@idt.net
+    technicalExperts:
+      - eytan.faverman@idt.net
+
+  users:
+    admins:
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: roman.vaskevich@idt.net
+        githubUsername: RamanVaskevich1984
+        ldapUid: rvaskevich
+      - email: dmitry.akunevich@idt.net
+        githubUsername: dakunevichIDT
+        ldapUid: dakunevich
+
+    maintainers:
+      - email: idt-jenkins+testuser2@idt.net
+        githubUsername: IDT-JENKINS
+        ldapUid: devops_test_2
+
+    developers:
+      - email: idt-jenkins+testuser3@idt.net
+        githubUsername: IDT-JENKINS
+        ldapUid: devops_test_3
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true

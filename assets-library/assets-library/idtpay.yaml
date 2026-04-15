@@ -1,0 +1,134 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: idtpay
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_payment_processing
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: idtpay
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationsGroup: idtpay
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: IDTPAY
+    ## id of github team, starts with @coretech
+    ## (Optional)
+    githubTeamId: coretech/idtpay
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team_idtpay
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: alexey.chudnikov@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - alexey.chudnikov@idt.net
+
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - patrice.menhart@idt.net
+
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - domenico.riggi@idt.net
+      - artem.gladkikh@idt.net
+      - dmitry.bryluk@idt.net
+      - sergey.sautin@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      - email: domenico.riggi@idt.net
+        githubUsername: driggi
+        ldapUid: driggi
+      - email: alexey.chudnikov@idt.net
+        githubUsername: goodml
+        ldapUid: achudnikov
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      - email: olga.kudina@idt.net
+        githubUsername: kudzina
+        ldapUid: okudina
+      - email: artem.gladkikh@idt.net
+        githubUsername: gladkikhartem
+        ldapUid: agladkikh
+      - email: vladislav.molochko@idt.net
+        githubUsername: DjVreditel
+        ldapUid: vmolochko
+      - email: dmitry.bryluk@idt.net
+        githubUsername: DmitryBryluk
+        ldapUid: dbryluk
+      - email: jamshid.abdusodikov@idt.net
+        githubUsername: jamshid-abdusodikov-idt
+        ldapUid: jabdusodikov
+      - email: virginia.sanabria@idt.net
+        githubUsername: virginiaSanabria
+        ldapUid: vsanabria
+      - email: dzmitry.stelmashok@idt.net
+        githubUsername: DmitryStelmashok
+        ldapUid: dstelmashok
+      - email: roman.kireev@idt.net
+        githubUsername: roman-kireev-idt
+        ldapUid: rkireev
+      - email: Konstantin.Chsherbakov@idt.net
+        githubUsername: kchsherbakov-idt
+        ldapUid: kchsherbakov
+      - email: sergey.sautin@idt.net
+        githubUsername: SergeySautinIDT
+        ldapUid: ssautin
+      - email: artem.nistratov@idt.net
+        githubUsername: artem-nistratov-idt
+        ldapUid: anistratov
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    idtpaydev:
+      envType: dev
+      accountId: 417209110137
+    qa:
+      envType: qa
+      accountId: 470427355418
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+    idtpayprod:
+      envType: prod
+      accountId: 370007191450
+      protected: true
+    idtpaypciprod:
+      envType: prod
+      accountId: 718994774397
+      protected: true

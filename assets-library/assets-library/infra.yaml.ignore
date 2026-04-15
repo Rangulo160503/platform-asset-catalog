@@ -1,0 +1,86 @@
+asset:
+  name: infra
+  infrastructure: true
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devops
+    applicationGroup: infra
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/terraform
+    teamSlackChannel: team_devops
+    resourceOwner: devops@idt.net
+
+  owners:
+    stakeholders:
+      - keith.powe@idt.net
+    productOwners:
+      - alexey.chudnikov@idt.net
+    technicalExperts:
+      - eytan.faverman@idt.net
+
+  users:
+    admins:
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: roman.vaskevich@idt.net
+        githubUsername: RamanVaskevich1984
+        ldapUid: rvaskevich
+      - email: dmitry.akunevich@idt.net
+        githubUsername: dakunevichIDT
+        ldapUid: dakunevich
+      - email: kanstantsin.yurtsevichb@idt.net
+        githubUsername: kyurtsevich
+        ldapUid: kyurtsevich
+      - email: ihar.bandarenka@idt.net
+        githubUsername: ihar-bandarenka-idt
+        ldapUid: ibandarenka
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    core_services:
+      envType: prod
+      accountId: 416223954868
+      protected: true
+      allowApplyInParallelWithOtherEnvironments: false
+    sand:
+      envType: lab
+      accountId: 312226949769
+    idt_dev:
+      envType: dev
+      accountId: 833915412828
+    idt_qa:
+      envType: qa
+      accountId: 470427355418
+    qa:
+      envType: qa
+      accountId: 470427355418
+    idt_prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+      allowApplyInParallelWithOtherEnvironments: false
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true
+      allowApplyInParallelWithOtherEnvironments: false
+    call_center_prod:
+      envType: prod
+      accountId: 128442260064
+      protected: true
+      allowApplyInParallelWithOtherEnvironments: false
+    n2p_dev:
+      envType: dev
+      accountId: 542258342574
+    n2p_prod:
+      envType: prod
+      accountId: 577533758790
+      protected: true
+      allowApplyInParallelWithOtherEnvironments: false

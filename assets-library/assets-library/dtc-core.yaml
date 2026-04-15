@@ -1,0 +1,222 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: dtc-core
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    ##
+    ## lob: tech_dev_mt_retail
+    lob: tech_dev_dtc
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: team_dtc_core
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: dtc-core
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: DTCBE
+
+    ## id of github team, starts with "coretech"
+    ## (Optional)
+    githubTeamId: coretech/team_dtc_core
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team_dtc_core
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: valery.kirichenko@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - valery.kirichenko@idt.net
+      ## (Required)
+    productOwners:
+      - dzmitry.martavoi@idt.net
+      ## List of Technical Experts
+      ## (Required)
+    technicalExperts:
+      - avasil.zapatylak@idt.net
+      - ivan.litvinau@idt.net
+      - fredrik.wallgren@idt.net
+      - siarhei.muha@idt.net
+      - dmitry.akunevich@idt.net
+      - anton.glinski@idt.net
+
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      - email: dzmitry.martavoi@idt.net
+        githubUsername: martavoi
+        ldapUid: dmartavoi
+      - email: valery.kirichenko@idt.net
+        githubUsername: kirychenkav
+        ldapUid: vkirichenko
+      - email: vasil.zapatylak@idt.net
+        githubUsername: vzapatylak-idt
+        ldapUid: vzapatylak
+      - email: siarhei.muha@idt.net
+        githubUsername: siarheimuha
+        ldapUid: smuha
+      - email: dmitry.akunevich@idt.net
+        githubUsername: dakunevichIDT
+        ldapUid: dakunevich
+      - email: anton.glinski@idt.net
+        githubUsername: anton-glinski-idt
+        ldapUid: aglinski
+      - email: ihar.halubovich@idt.net
+        githubUsername: ihar-halubovich-idt
+        ldapUid: ihalubovich
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      ## Each defined user should have same configuration
+      ## (Required)
+      - email: fredrik.wallgren@idt.net
+        githubUsername: fredrik-wallgren
+        ldapUid: fwallgren
+      - email: gevorg.gevorgyan@idt.net
+        githubUsername: gevorg-gevorgyan-idt
+        ldapUid: ggevorgyan
+      - email: akzhol.kanybekuly@idt.net
+        githubUsername: Akzhol-Kanybekuly-IDT
+        ldapUid: akanybekuly
+      - email: ivan.litvinau@idt.net
+        githubUsername: ilitvinau-idtnet
+        ldapUid: ilitvinau
+      - email: khiem.tran@idt.net
+        githubUsername: khiemfle
+        ldapUid: ltrain
+      - email: dzmitry.hankevich@idt.net
+        githubUsername: dhankevich
+        ldapUid: dhankevich
+      - email: anton.zimin@idt.net
+        githubUsername: anton-zimin-idt
+        ldapUid: azimin
+      - email: aliaksei.kleshchykau@idt.net
+        githubUsername: aliaksei-kleshchykau-idt
+        ldapUid: akleshchykau
+      - email: evgenii.koltsov@idt.net
+        githubUsername: EvgeniiKoltsovIDT
+        ldapUid: ekoltsov
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers:
+      - email: daria.alexeeva@idt.net
+        githubUsername: alexeevaDariaIDT
+        ldapUid: dalexeev
+      - email: ilya.tsimashevich@idt.net
+        githubUsername: ilya-tsimashevich
+        ldapUid: itsimashevich
+      - email: alberto.cucchiani@idt.net
+        githubUsername: weregoat
+        ldapUid: acucchiani
+      - email: pavel.valadzko@idt.net
+        githubUsername: valadzko
+        ldapUid: pvaladzko
+      - email: artem.gladkikh@idt.net
+        githubUsername: gladkikhartem
+        ldapUid: agladkikh
+      - email: artsiom.lyfar@idt.net
+        githubUsername: alyfar29
+        ldapUid: alyfar
+      - email: leandre.nsengumuremyi@idt.net
+        githubUsername: dreking
+        ldapUid: lnsengumuremyi
+      - email: evgeny.petrushevsky@idt.net
+        githubUsername: epetrushevsky
+        ldapUid: epetrushevsky
+      - email: bartlomiej.lipka@idt.net
+        githubUsername: bartlomiejlipka-idt
+        ldapUid: blipka
+      - email: pawel.jedrzejak@idt.net
+        githubUsername: pawel-jedrzejak
+        ldapUid: pjedrzejak
+      - email: aliaksandr.dzichenka@idt.net
+        githubUsername: aliaksandr-dzichenka
+        ldapUid: adzichenka
+      - email: maksim.kurnitski@idt.net
+        githubUsername: mkurnitski-idt
+        ldapUid: mkurnitski
+      - email: julia.tuvarjyieva@idt.net
+        githubUsername: juliaTuvarjyieva
+        ldapUid: jtuvarjyieva
+      - email: olga.dzmitranitsa@idt.net
+        githubUsername: olgadzmitranitsa
+        ldapUid: odzmitranitsa
+      - email: stanislav.badov@idt.net
+        githubUsername: stanislav-badov-idt
+        ldapUid: sbadov
+      - email: tomas.khellstrom@idt.net
+        githubUsername: thktomska-idt
+        ldapUid: tkhellstrom
+      - email: vitaly.zhuravkov@idt.net
+        githubUsername: vitaly-zhuravkov
+        ldapUid: vzhuravkov
+      - email: german.chukhrai@idt.net
+        githubUsername: gchukhrai
+        ldapUid: gchukhrai
+      - email: bahdan.pazniak@idt.net
+        githubUsername: poznyakbogdan2
+        ldapUid: bpazniak
+      - email: pavel.koval@idt.net
+        githubUsername: pavel-koval-idt
+        ldapUid: pkoval
+      - email: sergey.dubovik@idt.net
+        githubUsername: sergg-idt
+        ldapUid: sdubovik
+      - email: zauri.nikabadze@idt.net
+        githubUsername: Zako-idt
+        ldapUid: znikabadze
+      - email: nikita.kharashun@idt.net
+        githubUsername: nkharashun
+        ldapUid: nkharashun
+      - email: mikhail.shcheniatskiy@idt.net
+        githubUsername: mscheniatskiy
+        ldapUid: mshcheniatskiy
+      - email: aliaksandr.smirnou@idt.net
+        githubUsername: aliaksandr-smirnou-idt
+        ldapUid: asmirnou
+      - email: mikita.saladkevich@idt.net
+        githubUsername: SaladkevichM
+        ldapUid: msaladkevich
+      - email: aliaksandr.dzivovich@idt.net
+        githubUsername: Lowwess
+        ldapUid: adzivovich
+      - email: vladislav.morozov@idt.net
+        githubUsername: VladislavMorozovIDT
+        ldapUid: vmorozov
+      - email: nikita.demidenko@idt.net
+        githubUsername: ndemidenko
+        ldapUid: ndemidenko
+      - email: alexey.dozortsev@idt.net
+        githubUsername: alexey-dozortsev-idt
+        ldapUid: adozortsev

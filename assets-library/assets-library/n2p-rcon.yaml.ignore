@@ -1,0 +1,124 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: n2p-rcon
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_n2p_office
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: n2p-rcon
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: n2p-rcon
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: N2PRCON
+
+    ## id of github team, starts with "coretech"
+    ## (Optional)
+    githubTeamId: coretech/n2p-rcon
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: n2p_receptionist_console
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: dmitry.volodenkov@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - yitzi.wurtzel@net2phone.com
+      - anatoly.popov@idt.net
+    ## List of Product Owners
+    ## (Required)
+    productOwners:
+      - yitzi.wurtzel@net2phone.com
+    ## List of Technical Experts
+    ## (Required)
+    technicalExperts:
+      - dmitry.volodenkov@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: dmitry.volodenkov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: dimmy-timmy
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: dvolodenkov
+      - email: anton.ivchenko@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: iavm-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: aivchenko
+      - email: sergei.valko@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: sergeivalkoidt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: svalko
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      - email: marcelo.vargas@idt.net
+        githubUsername: marcelovargasvargas
+        ldapUid: mvargas
+      - email: aleksander.kosobudsky@idt.net
+        githubUsername: alexkosobudsky
+        ldapUid: akosobudsky
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers:
+      - email: sergey.radyuk@idt.net
+        githubUsername: SergeyRaduke
+        ldapUid: sradyuk
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    dev:
+      envType: dev
+      accountId: 542258342574
+    qa1:
+      envType: qa
+      accountId: 542258342574
+    uat:
+      envType: uat
+      accountId: 577533758790
+    prod:
+      envType: prod
+      accountId: 577533758790

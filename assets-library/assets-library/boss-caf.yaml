@@ -1,0 +1,284 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: boss-caf
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    ##
+    ## lob: tech_dev_mt_retail
+    lob: tech_dev_money_remittance
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: caf
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: boss-caf
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: ATF
+
+    ## id of github team, starts with "coretech"
+    ## (Optional)
+    githubTeamId: coretech/team-caf
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team_caf
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: team-caf@idt.net
+
+  ## Business owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - valery.leontyev@idt.net
+      ## (Required)
+    productOwners:
+      - mark.moorman@idt.net
+      ## List of Technical Experts
+      ## (Required)
+    technicalExperts:
+      - dzmitry.khralovich@idt.net
+
+  ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+  ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: valery.leontyev@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: valery-leontyev-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: vleontyev
+      - email: stanislav.badov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: stanislav-badov-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: sbadov
+      - email: dzmitry.khralovich@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: dzmitry-khralovich
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: dkhralovich
+
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: german.chukhrai@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: gchukhrai
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: gchukhrai
+      - email: bahdan.pazniak@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: poznyakbogdan2
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: bpazniak
+      - email: pavel.koval@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: pavel-koval-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: pkoval
+      - email: sergey.dubovik@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: sergg-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: sdubovik
+      - email: anton.chertovich@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: anton-chertovich-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: achertovich
+      - email: oleg.goncharov@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: oleg-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: ogoncharov
+      - email: zauri.nikabadze@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: Zako-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: znikabadze
+      - email: nikita.kharashun@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: nkharashun
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: nkharashun
+      - email: vlad.buinevich@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: VladBuinevichIDT
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: vbuinevich
+      - email: vladislav.dobritski@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: vladislav-dobritski-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: vdobritski
+      - email: franco.aldunate@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: franco-aldunate-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: faldunate
+      - email: donald.koch@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: don-koch-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: dkoch
+      - email: ghazaros.barseghyan@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: ghbarseghyanidt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: gbarseghyan
+      - email: raman.shreitar@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: ramanshreitar-tech
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: rshreitar
+      - email: alexander.biarozka@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: aliaksandr-biarozka
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: abiarozka
+      - email: mikhail.zuev@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: mikhail-zuev-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: mzuev
+      - email: mikhail.musin@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: mikhail-musin-idt
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: mmusin
+      - email: mikhail.stralenia@idt.net
+        githubUsername: mikhail-stralenia-idt
+        ldapUid: mstralenia
+
+    ## List of Asset Developers. Each member will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    dev:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: dev
+      ## AWS account ID
+      ## (Required)
+      accountId: 833915412828
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic
+
+    qa:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: qa
+      ## AWS account ID
+      ## (Required)
+      accountId: 470427355418
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic
+
+    uat:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: uat
+      ## AWS account ID
+      ## (Required)
+      accountId: 412304547329
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic
+
+    prod:
+      ## Environment type, one of 'lab', 'dev', 'qa', 'uat', 'prod'
+      ## (Required)
+      envType: prod
+      ## AWS account ID
+      ## (Required)
+      accountId: 412304547329
+      ## If changes to child stack can be hidden on change to parent stack.
+      ## (Optional) Defaults false
+      protected: false
+      ## Name of the VPC
+      ## (Optional) Defaults "generic"
+      vpcName: generic

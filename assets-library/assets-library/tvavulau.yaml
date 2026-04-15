@@ -1,0 +1,55 @@
+---
+asset:
+  name: tvavulau
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devtools
+    applicationGroup: tvavulau
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: tsimafei.vavulau@idt.net
+
+  owners:
+    stakeholders:
+      - tsimafei.vavulau@idt.net
+    productOwners:
+      - tsimafei.vavulau@idt.net
+    technicalExperts:
+      - tsimafei.vavulau@idt.net
+
+  users:
+    admins:
+      - email: alexey.chudnikov@idt.net
+        githubUsername: goodml
+        ldapUid: achudnikov
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: tsimafei.vavulau@idt.net
+        githubUsername: tsimafei-vavulau-idt
+        ldapUid: tvavulau
+
+    maintainers: ~
+
+    developers: 
+      - email: yulyan.glonti@idt.net
+        githubUsername: yglonti
+        ldapUid: yglonti
+
+  environments:
+    idt_dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    devops_test:
+      envType: qa
+      accountId: 445309495976
+      vaultSupport: true
+    idt_qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true

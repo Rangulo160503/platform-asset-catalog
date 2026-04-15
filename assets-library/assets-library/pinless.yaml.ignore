@@ -1,0 +1,29 @@
+#Decommission
+
+asset:
+  name: pinless
+  gitRepository: https://github.com/coretech/pinless-terra-live
+  lob: tech_dev_retail_comm
+  scrumTeam: Pinless
+  applicationsGroup: ~
+  stakeholder: ~
+  productOwner: emilio.delrio@idt.net
+  technicalExpert: eugene.sergeev@idt.net
+  jiraProjectId: PIN
+  githubTeamId: coretech/team-pinless-code-owners
+  teamSlackChannel: team_pinless
+  resourceOwner: team-pinless@idt.net
+
+  environments:
+    sandbox:
+      accountId: 312226949769
+    dev:
+      accountId: 470427355418
+    qa:
+      accountId: 470427355418
+    uat:
+      accountId: 412304547329
+      protected: true
+    prod:
+      accountId: 412304547329
+      protected: true

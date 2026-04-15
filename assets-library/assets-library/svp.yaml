@@ -1,0 +1,93 @@
+asset:
+  name: svp
+
+  globalMetadata:
+    lob: tech_dev_stored_value
+    scrumTeam: svp
+    applicationGroup: svp
+
+  metadata:
+    jiraProjectId: svp
+    githubTeamId: coretech/boss-svp
+    teamSlackChannel: team_svp
+    resourceOwner: svpdevqa@idt.net
+
+  owners:
+    stakeholders:
+      - esti.witty@idt.net
+    productOwners:
+      - yury.rakomsin@idt.net
+    technicalExperts:
+      - siarhei.naralenkau@idt.net
+
+  users:
+    admins:
+      - email: eugene.ahramenko@idt.net
+        githubUsername: eahramenko
+        ldapUid: eahramenko
+      - email: artiom.borisevich@idt.net
+        githubUsername: artsiomborisevich
+        ldapUid: arborisevich
+      - email: ivan.logvinov@idt.net
+        githubUsername: LogvinovIvanIDT
+        ldapUid: ilogvinov
+      - email: dan.ivanov@idt.net
+        githubUsername: danivanovidt
+        ldapUid: divanov
+      - email: mustafa.husein@idt.net
+        githubUsername: MustafaMZH
+        ldapUid: mhusein
+      - email: roman.bondarenko@idt.net
+        githubUsername: hollandets
+        ldapUid: rbondarenko
+      - email: dzmitry.dulko@idt.net
+        githubUsername: dzmitry-dulko
+        ldapUid: ddulko
+      - email: daniel.totaro@idt.net
+        githubUsername: IDTdtotaro
+        ldapUid: dtotaro
+      - email: bindu.vaishnani@idt.net
+        githubUsername: bvaishnaniIDT
+        ldapUid: bvaishna
+      - email: vaughn.nobles@idt.net
+        githubUsername: vnobles
+        ldapUid: vnobles
+      - email: johanna.hanrahan@idt.net
+        githubUsername: jhanrahanIDT
+        ldapUid: jhanrahan
+      - email: artsiom.reutovich@idt.net
+        githubUsername: Artsiom-Reutovich
+        ldapUid: areutovich
+      - email: aliaksandr.miron@idt.net
+        githubUsername: amiron-idt
+        ldapUid: amiron
+    maintainers:
+      - email: aliaksei.niaklesa@idt.net
+        githubUsername: alexeyNeklesa-idt
+        ldapUid: aniaklesa
+      - email: viktar.vinitski@idt.net
+        githubUsername: vvinitski-idt
+        ldapUid: vvinitski
+      - email: marcos.lara@idt.net
+        githubUsername: marcos-lara
+        ldapUid: mlara
+      - email: aliaksandr.leherau@idt.net
+        githubUsername: aliaksandrleherau-ops
+        ldapUid: aleherau
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 470427355418
+    qa:
+      envType: qa
+      accountId: 470427355418
+    sandbox:
+      envType: lab
+      accountId: 312226949769
+      allowApplyInParallelWithOtherEnvironments: true
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true

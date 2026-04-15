@@ -1,0 +1,96 @@
+asset:
+  ## Name of the asset - same as name of file and same as prefix of terra-live repository
+  ## (Required)
+  name: didinv-prod
+
+  ## Global Metadata of the asset
+  ## (Required)
+  globalMetadata:
+    ## Name of the default lob from https://docs.google.com/spreadsheets/d/1o7Oy9Wv5ATXiwpkx5BZbxyXDRXEKQn9zNaNPc6iDI2M
+    ## (Required)
+    lob: tech_dev_idt_express
+
+    ## name of scrum team from the same document second sheet
+    ## (Required)
+    scrumTeam: carrier-did-inv
+
+    ## name of applications group, required but not defined yet on company level,
+    ## recommended same as asset name
+    ## (Required)
+    applicationGroup: didinv-prod
+
+  ## Additional Metadata of the asset
+  ## (Optional)
+  metadata:
+    ## ID of primary JIRA project
+    ## (Optional)
+    jiraProjectId: RTSNI
+
+    ## id of github team, starts with @coretech
+    ## (Optional)
+    githubTeamId: coretech/carrier-did-inventory
+
+    ## Name of primary Slack channel
+    ## (Optional)
+    teamSlackChannel: team_did_inv
+
+    ## Primary responsible person for created resources
+    ## (Optional)
+    resourceOwner: artem.levchuk@idt.net
+
+  ## Busineess owners
+  ## (Required)
+  owners:
+    ## List of Stakeholders
+    ## (Required)
+    stakeholders:
+      - peter.broes@idt.net
+      ## List of Product Owners
+      ## (Required)
+    productOwners:
+      - stephen.gulics@idt.net
+      ## List of Technical Experts
+      ## (Required)
+    technicalExperts:
+      - artem.levchuk@idt.net
+      ## Map of Users, who will have access to created resources, Vault secrets, Jenkins jobs
+      ## (Required)
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## Expected to have Tech Lead/Senior Developer, DevOps, Manager/Director role.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      - email: artem.levchuk@idt.net
+        githubUsername: artemlevchuk
+        ldapUid: alevchuk
+      - email: stephen.gulics@idt.net
+        githubUsername: sgulics
+        ldapUid: sgulics
+      - email: manan.patel@idt.net
+        githubUsername: manpatel
+        ldapUid: mpatel
+      - email: vladimir.ladynev@idt.net
+        githubUsername: v-ladynev
+        ldapUid: vladynev
+      - email: vladislav.nevar@idt.net
+        githubUsername: NevarV
+        ldapUid: vnevar
+    ## List of Asset Maintainers. Each member will have read access to Production and read/write access to Non-Production(UAT, QA, Development, Lab) environments.
+    ## Expected to be QA Engineer. Can be empty(~)
+    ## (Optional) Defaults ~
+    maintainers: ~
+
+    ## List of Asset Developers. Each memeber will have read access to QA, UAT environment and read/write access to Development, Lab environment.
+    ## Expected to be Software Engineers/Developers. Can be empty(~)
+    ## (Optional) Defaults ~
+    developers: ~
+
+  ## Map of AWS Environments. Terra-Live environments can be created on specified list of environments/AWS accounts.
+  ## (Required)
+  environments:
+    prod:
+      envType: prod
+      accountId: 412304547329
+      vpcName: generic

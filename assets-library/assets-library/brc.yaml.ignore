@@ -1,0 +1,68 @@
+asset:
+  name: brc
+  gitRepository: https://github.com/coretech/brc-terra-live
+  # lob: tech_dev_br_general
+  # scrumTeam: team_dtc_infra
+  # applicationsGroup: ~
+  # stakeholder: alberto.marchetti@idt.net
+  # productOwner: oleg.verhovyh@idt.net
+  # technicalExpert: alberto.marchetti@idt.net
+  # jiraProjectId: DI
+  # githubTeamId: coretech/boss-dtc-infra
+  # teamSlackChannel: team_dtc_infra
+  # resourceOwner: dtc-infra@idt.net
+
+  globalMetadata:
+    lob: tech_dev_br_general
+    scrumTeam: team_dtc_infra
+    applicationsGroup: ~
+
+  metadata:
+    jiraProjectId: DI
+    githubTeamId: coretech/boss-dtc-infra
+    teamSlackChannel: team_dtc_infra
+    resourceOwner: alberto.marchetti@idt.net
+
+  owners:
+    stakeholders:
+      - alberto.marchetti@idt.net
+    productOwners:
+      - oleg.verhovyh@idt.net
+    technicalExperts:
+      - alberto.marchetti@idt.net
+
+  users:
+    ## List of Asset Administrators. Each member will have full access to all environments.
+    ## (Required)
+    admins:
+      ## Each defined user should have same configuration
+      ## (Required)
+      ## Email address, ends with @idt.net
+      ##  (Required)
+      - email: eugene.rotar@idt.net
+        ## GitHub user id(login)
+        ## (Required)
+        githubUsername: evgeniy-rotar
+        ## LDAP user ID, typically first letter of the first name + last name
+        ## (Required)
+        ldapUid: erotar
+      - email: andrey.devgut@idt.net
+        githubUsername: andrey-devgut
+        ldapUid: adevgut
+      - email: eugene.lipatov@idt.net
+        githubUsername: elipatov
+        ldapUid: elipatov
+      - email: alberto.marchetti@idt.net
+        githubUsername: cmaster11
+        ldapUid: amarchetti
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    qa:
+      accountId: 470427355418
+    prod:
+      accountId: 412304547329
+      protected: true

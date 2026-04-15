@@ -1,0 +1,62 @@
+# Created to support the NCT CVOSS Web (webportal) application
+# https://idtjira.atlassian.net/browse/CVOSS-9081
+asset:
+  name: nct-cvoss-webportal
+
+  globalMetadata:
+    lob: tech_dev_cable_telephony
+    scrumTeam: cvoss
+    applicationGroup: nct-cvoss
+
+  metadata:
+    jiraProjectId: CVOSS
+    githubTeamId: ~
+    teamSlackChannel: n2p-vlas-cvoss-dsm
+    resourceOwner: adam.sherman@idt.net
+
+  owners:
+    stakeholders:
+      - natasha.stone@net2phone.com
+    productOwners:
+      - miriam.wohlgelernter@net2phone.com
+    technicalExperts:
+      - adam.sherman@idt.net
+      - willysoria.guzman@idt.net
+
+  users:
+    admins:
+      - email: adam.sherman@idt.net
+        githubUsername: crbn60
+        ldapUid: asherman
+      - email: fidel.barcaya@idt.net
+        githubUsername: fbarcaya
+        ldapUid: fbarcaya
+    maintainers:
+      - email: bill.shankle@net2phone.com
+        githubUsername: wjshankle
+        ldapUid: wshankle
+      - email: miriam.wohlgelernter@net2phone.com
+        githubUsername: MIRWOHL
+        ldapUid: miriamw
+      - email: Marcelo.Ancieta@idt.net
+        githubUsername: mancieta
+        ldapUid: mancieta
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 958845839241
+    qa:
+      envType: qa
+      accountId: 958845839241
+    staging:
+      envType: qa
+      accountId: '344924705456'
+      protected: false
+      allowApplyInParallelWithOtherEnvironments: false
+    prod:
+      envType: prod
+      accountId: '344924705456'
+      protected: true
+      allowApplyInParallelWithOtherEnvironments: false

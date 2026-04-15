@@ -1,0 +1,57 @@
+# Marked for decommission
+asset:
+  name: ivanp
+  infrastructure: true
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devops
+    applicationGroup: ivanp
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: devops@idt.net
+
+  owners:
+    stakeholders:
+      - keith.powe@idt.net
+    productOwners:
+      - george.lerma@idt.net
+    technicalExperts:
+      - andrei.shahun@idt.net
+      - ivan.polonevich@idt.net
+
+  users:
+    admins:
+      - email: ivan.polonevich@idt.net
+        githubUsername: Joni-Lover
+        ldapUid: ipolonevich
+      - email: andrei.shahun@idt.net
+        githubUsername: misternobody
+        ldapUid: ashahun
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+    maintainers: ~
+    developers: ~
+
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+      allowApplyInParallelWithOtherEnvironments: true
+    n2p-dev:
+      envType: dev
+      accountId: 542258342574
+    qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+      allowApplyInParallelWithOtherEnvironments: false
+    prod:
+      envType: prod
+      accountId: 833915412828
+      protected: false

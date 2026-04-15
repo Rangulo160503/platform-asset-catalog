@@ -1,0 +1,52 @@
+asset:
+  name: qe-management
+  globalMetadata:
+    lob: tech_dev_br_general
+    scrumTeam: QA
+    applicationGroup: qe-management
+  metadata:
+    jiraProjectId: ~
+    githubTeamId: ~
+    teamSlackChannel: quality-engineering
+    resourceOwner: stanislav.badov@idt.net
+  owners:
+    stakeholders:
+      - stanislav.badov@idt.net
+      - karime.salomon@idt.net
+
+    productOwners: ~
+
+    technicalExperts: ~
+
+  users:
+    admins:
+      - email: karime.salomon@idt.net
+        githubUsername: KarimeSZ
+        ldapUid: ksalomon
+      - email: stanislav.badov@idt.net
+        githubUsername: stanislav-badov-idt
+        ldapUid: sbadov
+      - email: anton.piatrovich@idt.net
+        githubUsername: apiatrovich
+        ldapUid: apiatrovich
+      - email: olga.kudina@idt.net
+        githubUsername: kudzina
+        ldapUid: okudina
+      - email: sergei.kolos@idt.net
+        githubUsername: sergeikolos-idt
+        ldapUid: skolos
+
+    maintainers: ~
+
+    developers: ~
+  environments:
+    dev:
+      envType: dev
+      accountId: 833915412828
+    qa:
+      envType: qa
+      accountId: 470427355418
+    prod:
+      envType: prod
+      accountId: 412304547329
+      protected: true

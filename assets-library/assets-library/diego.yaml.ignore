@@ -1,0 +1,62 @@
+# Marked for the decommission 
+asset:
+  name: diego
+
+  globalMetadata:
+    lob: tech_dev_infrastructure
+    scrumTeam: team_devops
+    applicationGroup: diego
+
+  metadata:
+    jiraProjectId: DEVOPS
+    githubTeamId: coretech/core-administrators
+    teamSlackChannel: team_devops
+    resourceOwner: diego.turcios@idt.net
+
+  owners:
+    stakeholders:
+      - keith.powe@idt.net
+    productOwners:
+      - george.lerma@idt.net
+
+  users:
+    admins:
+      - email: eytan.faverman@idt.net
+        githubUsername: efaverman
+        ldapUid: efaverman
+      - email: diego.turcios@idt.net
+        githubUsername: diegoturcios
+        ldapUid: dturcios
+
+
+    maintainers: ~
+
+    developers: ~
+
+  environments:
+    sand:
+      envType: lab
+      accountId: 312226949769
+      protected: false
+      vpcName: generic
+      vaultSupport: true
+    dev:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    dev1:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    dev-pro:
+      envType: dev
+      accountId: 833915412828
+      vaultSupport: true
+    qa:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
+    qav1:
+      envType: qa
+      accountId: 470427355418
+      vaultSupport: true
